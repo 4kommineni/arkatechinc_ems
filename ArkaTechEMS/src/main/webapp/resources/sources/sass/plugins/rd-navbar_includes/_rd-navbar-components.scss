@@ -1,0 +1,143 @@
+/*
+* Navbar components
+*/
+
+// RD Navbar
+.rd-navbar {
+  display: none;
+  background: $rd-navbar-background;
+  box-shadow: $rd-navbar-shadow;
+}
+
+// RD Navbar Toggle
+.rd-navbar-toggle {
+  @include make-toggle(
+          $rd-navbar-toggle-preset,
+          $rd-navbar-min-line-height,
+          $rd-navbar-min-font-size,
+          $rd-navbar-fixed-toggle-color
+  );
+  background-color: transparent;
+  border: none;
+  &:focus {
+    outline: none;
+  }
+  display: none;
+}
+
+// RD Navbar Brand
+.rd-navbar-brand {
+  display: inline-block;
+  transition: none;
+  white-space: nowrap;
+  > * {
+    display: inline-block;
+    font-size: 36px;
+    line-height: 1;
+  }
+
+  .brand-name {
+    &, &:focus, &:active, &:hover {
+      color: $gray-base;
+    }
+
+    span {
+      letter-spacing: -.025em;
+    }
+
+    span:first-child {
+      position: relative;
+      z-index: 1;
+    }
+
+    span + span {
+      margin-left: -.32em;
+    }
+  }
+
+  span:first-child {
+    margin: 0 5px 0 0;
+  }
+
+  span:last-child {
+    margin: 0 0 0 5px;
+  }
+}
+
+// RD Navbar Nav
+.rd-navbar-nav {
+}
+
+// RD Navbar Dropdown
+.rd-navbar-dropdown {
+  display: none;
+}
+
+// RD Navbar Search
+.rd-navbar-search {
+  * {
+    margin-bottom: 0;
+  }
+
+  &-toggle {
+    display: inline-block;
+    font: 400 22px/36px "fl-bigmug-line";
+    cursor: pointer;
+
+    &, &:before, &:after {
+      text-align: center;
+      width: 36px;
+      height: 36px;
+    }
+
+    &:before, &:after {
+      position: absolute;
+      left: 0;
+      top: 0;
+    }
+
+    .rd-navbar:not(.rd-navbar-fixed) & {
+      &:after {
+        content: '\e01e';
+        transition: .3s all ease;
+        @include transform(scale(0) rotate(-90deg));
+      }
+
+      &.active {
+        &:before {
+          @include transform(scale(0) rotate(90deg));
+        }
+
+        &:after {
+          @include transform(scale(1) rotate(0deg));
+        }
+      }
+    }
+
+    &:before {
+      position: absolute;
+      left: 0;
+      top: 0;
+      content: '\e09c';
+      transition: .3s all ease;
+      @include transform(scale(1) rotate(0deg));
+    }
+
+    .rd-navbar-fixed &, .rd-navbar-fixed &:before {
+      width: $rd-navbar-min-line-height;
+      line-height: $rd-navbar-min-line-height;
+    }
+  }
+}
+
+// RD Navbar aside
+.rd-navbar-aside {
+  pointer-events: none;
+
+  > * { pointer-events: auto; }
+}
+
+.rd-navbar-aside-toggle {
+  display: none;
+  pointer-events: auto;
+}

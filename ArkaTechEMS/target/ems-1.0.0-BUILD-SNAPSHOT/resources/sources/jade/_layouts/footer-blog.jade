@@ -1,0 +1,21 @@
+extends  ../_skeleton
+
+block variables
+  - var footerLayout = 1
+
+block title
+  title=layouts[3].title
+
+block page
+  // Page Header
+  include ../_header
+
+  // Page Content
+  main.page-content
+    +heading(layouts[3].title)
+    +breadcrumbs([[layouts[3].title]])
+    include ../_includes/_placeholder
+    include ../_includes/_brands-carousel
+
+  // Page Footer
+  include ../_footer

@@ -1,0 +1,225 @@
+extends  _skeleton
+
+block variables
+  - var activeIndex = -1
+  - var footerActiveIndex = 3
+
+block title
+  title=footerMenu[footerActiveIndex]
+
+block page
+  // Page Header
+  include _header
+
+  // Page Content
+  main.page-content
+    +heading('Typography')
+    +breadcrumbs([['Elements', '#'], [footerMenu[footerActiveIndex]]])
+
+    // Headings
+    section.section-45.text-gray-base
+      .shell
+        .range
+          .cell-xs-12.cell-sm-6
+            .inset-md-right-30.inset-lg-right-50
+              h1.text-gray-darker Heading 1
+              p.
+                Welcome to the leading company on the market! Our success is driven by the
+                highest quality customer service. We can meet the requirements even of the
+                whimsical clients; there are no complex tasks for us! Thanks for your choice!
+          .cell-xs-12.cell-sm-6.offset-top-41.offset-sm-top-0
+            .inset-md-right-30.inset-lg-right-50.offset-top-5
+              h2.text-gray-darker Heading 2
+              p.
+                Welcome to the leading company on the market! Our success is driven by the
+                highest quality customer service. We can meet the requirements even of the
+                whimsical clients; there are no complex tasks for us! Thanks for your choice!
+          .cell-xs-12.cell-sm-6.offset-top-41
+            .inset-md-right-30.inset-lg-right-50
+              h3.text-gray-darker Heading 3
+              p.offset-top-19.
+                Welcome to the leading company on the market! Our success is driven by the
+                highest quality customer service. We can meet the requirements even of the
+                whimsical clients; there are no complex tasks for us! Thanks for your choice!
+          .cell-xs-12.cell-sm-6.offset-top-41.offset-sm-top-50
+            .inset-md-right-30.inset-lg-right-50
+              h4.text-gray-darker Heading 4
+              p.
+                Welcome to the leading company on the market! Our success is driven by the
+                highest quality customer service. We can meet the requirements even of the
+                whimsical clients; there are no complex tasks for us! Thanks for your choice!
+          .cell-xs-12.cell-sm-6.offset-top-41
+            .inset-md-right-30.inset-lg-right-50
+              h5.text-gray-darker Heading 5
+              p.
+                Welcome to the leading company on the market! Our success is driven by the
+                highest quality customer service. We can meet the requirements even of the
+                whimsical clients; there are no complex tasks for us! Thanks for your choice!
+          .cell-xs-12.cell-sm-6.offset-top-41
+            .inset-md-right-30.inset-lg-right-50
+              h6.text-gray-darker Heading 6
+              p.
+                Welcome to the leading company on the market! Our success is driven by the
+                highest quality customer service. We can meet the requirements even of the
+                whimsical clients; there are no complex tasks for us! Thanks for your choice!
+    ='\n'
+
+    // Blockquote
+    section
+      .shell
+        .range
+          .cell-xs-12.cell-sm-10.cell-lg-8
+            h3 Blockquote
+            blockquote.quote.offset-top-25
+              .quote-body
+                q.
+                  Design is the fundamental soul of a man-made creation that ends up expressing itself in successive outer
+                  layers of the product or service. The iMac is not just the color or translucence or the shape of the shell.
+                  The essence of the iMac is to be the finest possible consumer computer in which each element plays together.
+              .quote-meta
+                cite Steve Jobs
+                span (CEO & Founder)
+    ='\n'
+
+    // Text Formatting
+    section.section-top-45
+      .shell
+        .range
+          .cell-xs-12.cell-sm-10.cell-lg-7
+            h3 Text Formatting
+            p.offset-top-19
+              a(href='#').link-inline Link text
+              a(href='#').link-inline.hover Hover link text
+              a(href='#').link-inline.active Press link
+              | A website is a medium that connects a person with the world of digital data.
+              span.text-bold This is a bold text
+              | With its help users can access information, make purchases, communicate with each other, and do loads of other things.
+            p.offset-top-22
+              span A website has become an indispensable
+              mark highlighted text
+              | tool of a professional business
+              span.text-italic italic text
+              | presentation. Due to the clever marketing strategy and professional web designing, corporations can
+              | grow
+              span.text-gray-light(data-toggle='tooltip', data-placement="top", title="Tooltip text") Tooltips
+              | their client base with ease. On the modern market the competition is very tough,
+              span.text-strike strickethrough text
+              | so in order to be a success businesses experiment
+              span.text-underline underlined text.
+    ='\n'
+
+    // Lists
+    section.section-top-45
+      .shell
+        .range
+          .cell-xs-12.cell-sm-4.cell-lg-3
+            h3 Unordered List
+            ul.list-marked.offset-top-19
+              li Highly Customizable;
+              li Pre-Built Pages;
+              li Powered Page Builder;
+              li SEO Optimized;
+              li Outstanding Support.
+          .cell-xs-12.cell-sm-4.cell-lg-3.offset-top-30.offset-sm-top-0
+            h3 Ordered List
+            ol.list-ordered.offset-top-19
+              li Highly Customizable;
+              li Pre-Built Pages;
+              li Powered Page Builder;
+              li SEO Optimized;
+              li Outstanding Support.
+
+    ='\n'
+
+    // Lists
+    section.section-top-35
+      .shell
+        h3 Icon List
+        .range.offset-top-30
+          .cell-xs-12.cell-md-10.cell-lg-12
+            ul.range.range-sm-center.list-iconed
+              li.cell-xs-12.cell-sm-6.cell-lg-3
+                .unit.unit-horizontal.unit-spacing-lg
+                  .unit-left
+                    span.icon.icon-md.icon-primary.fl-sympletts-screen85
+                  .unit-body
+                    h5 Retina Ready
+                    p.
+                      The goal of Retina Displays is
+                      to make the display of text extremely crisp, so pixels are
+              li.cell-xs-12.cell-sm-6.cell-lg-3.offset-top-34.offset-sm-top-0
+                .unit.unit-horizontal.unit-spacing-lg
+                  .unit-left
+                    span.icon.icon-md-variant-1.icon-primary.fl-sympletts-equalizer43
+                  .unit-body
+                    h5 Incredibly Flexible
+                    p.
+                      Some developers have a
+                                                                                defined workflow and are
+                                                                                used to using various tools
+              li.cell-xs-12.cell-sm-6.cell-lg-3.offset-top-34.offset-lg-top-0
+                .unit.unit-horizontal.unit-spacing-lg
+                  .unit-left
+                    span.icon.icon-md.icon-primary.fl-sympletts-float2
+                  .unit-body
+                    h5 Quick Support
+                    p.
+                      Problems with your website or
+                                                                                email? Check our contact us.
+                                                                                We're here to help!
+              li.cell-xs-12.cell-sm-6.cell-lg-3.offset-top-34.offset-lg-top-0
+                .unit.unit-horizontal.unit-spacing-lg
+                  .unit-left
+                    span.icon.icon-md.icon-primary.fl-sympletts-check-mark4
+                  .unit-body
+                    h5 Regular Updates
+                    p.
+                      New child themes, skins and
+                                                                                predesigned pages are being released 2-3 times per month.
+
+    ='\n'
+
+    // Layouts
+    section.section-top-45.section-bottom-85
+      .shell
+        .range
+          .cell-xs-12
+            h3 Image Centered
+            figure
+              +jpg('typography-1-1169x610')
+            p.offset-top-25.
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. A accusamus ad alias amet, at consectetur consequatur consequuntur culpa dicta dolore dolorem eius eos error
+              eveniet hic id illo iste itaque libero molestias, nam natus nisi nobis nostrum numquam officia officiis
+        .range.offset-top-38
+          .cell-xs-12
+            h3 Image Left
+          .cell-xs-12.offset-top-25
+            .range
+              .cell-xs-12.cell-sm-8.cell-md-6
+                figure
+                  +jpg('typography-2-570x386')
+              .cell-xs-12.cell-md-6.offset-top-30.offset-md-top-0
+                .inset-md-left-30.inset-lg-left-70
+                  p.
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda
+                    deleniti eaque eum exercitationem fugit in, ipsum, itaque minus molestias nam nobis officia quidem quisquam ratione recusandae reprehenderit veniam vero voluptates! A ad aspernatur autem corporis, culpa deleniti dignissimos id in iure, laudantium magnam maxime nostrum, praesentium quam soluta tempora voluptates? Alias aliquam architecto consequatur doloribus dolorum est ex excepturi facere in, iusto pariatur provident,
+                    quod repudiandae! Accusantium aliquid amet aut beatae consequatur dignissimos dolores ducimus fuga, id iste itaque molestias nisi nostrum omnis perspiciatis quasi qui, quia quisquam, tenetur ullam unde velit veniam! Aliquam aliquid aut commodi cumque dolorem, ducimus enim eos harum id illum, ipsa iusto, laborum magnam maiores minima necessitatibus obcaecati optio provident
+
+          .cell-xs-12.offset-top-45
+            h3 Image Right
+          .cell-xs-12.offset-top-25
+            .range.range-sm-right.range-md-reverse
+              .cell-xs-12.cell-sm-8.cell-md-6
+                figure
+                  +jpg('typography-3-570x386')
+              .cell-xs-12.cell-md-6.offset-top-30.offset-md-top-0
+                .inset-md-right-30.inset-lg-right-70
+                  p.
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda
+                    deleniti eaque eum exercitationem fugit in, ipsum, itaque minus molestias nam nobis officia quidem quisquam ratione recusandae reprehenderit veniam vero voluptates! A ad aspernatur autem corporis, culpa deleniti dignissimos id in iure, laudantium magnam maxime nostrum, praesentium quam soluta tempora voluptates? Alias aliquam architecto consequatur doloribus dolorum est ex excepturi facere in, iusto pariatur provident,
+                    quod repudiandae! Accusantium aliquid amet aut beatae consequatur dignissimos dolores ducimus fuga, id iste itaque molestias nisi nostrum omnis perspiciatis quasi qui, quia quisquam, tenetur ullam unde velit veniam! Aliquam aliquid aut commodi cumque dolorem, ducimus enim eos harum id illum, ipsa iusto, laborum magnam maiores minima necessitatibus obcaecati optio provident
+
+    ='\n'
+
+  // Page Footer
+  include _footer

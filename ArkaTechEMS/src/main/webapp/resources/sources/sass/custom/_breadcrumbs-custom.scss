@@ -1,0 +1,52 @@
+//
+// Breadcrumbs
+// --------------------------------------------------
+$breadcrumbs-active-color: $gray-light;
+$offset: 5px;
+.breadcrumbs-custom {
+  position: relative;
+  padding: (15px - $offset) 0 15px;
+
+  li {
+    position: relative;
+    display: inline-block;
+    padding-right: 24px;
+    margin-top: $offset;
+    &, a, a:focus, a:active {
+      color: $gray-base;
+    }
+  }
+
+  li:after {
+    position: absolute;
+    right: 4px;
+    display: inline-block;
+    vertical-align: middle;
+    font-family: "FontAwesome";
+    font-size: 16px;
+    content: '\f105';
+    color: $shakespeare;
+  }
+
+  li:last-child {
+    &:after {
+      display: none;
+    }
+  }
+
+  li.active {
+    color: $breadcrumbs-active-color;
+  }
+
+  li a:hover {
+    color: $shakespeare;
+  }
+}
+
+@media (min-width: $screen-sm-min) {
+  .breadcrumbs-custom {
+    li {
+      padding-right: 18px;
+    }
+  }
+}

@@ -1,0 +1,66 @@
+// Element groups
+// --------------------------------------------------
+
+html {
+  .group {
+    @include element-groups-custom(7px, 7px);
+  }
+
+  .group-xs {
+    @include element-groups-custom(5px, 5px);
+  }
+
+  .group-sm {
+    @include element-groups-custom(18px, 18px);
+  }
+
+  .group-md {
+    @include element-groups-custom(21px, 21px);
+  }
+
+  .group-lg {
+    @include element-groups-custom(23px, 23px);
+  }
+
+  .group-xl {
+    @include element-groups-custom(30px, 30px);
+  }
+
+  .group-top {
+    > *, > *:first-child {
+      vertical-align: top;
+    }
+  }
+
+  .group-middle {
+    > *, > *:first-child {
+      vertical-align: middle;
+    }
+  }
+
+  .group-bottom {
+    > *, > *:first-child {
+      vertical-align: bottom;
+    }
+  }
+
+  .group-baseline {
+    > *, > *:first-child {
+      vertical-align: baseline;
+    }
+  }
+}
+
+.group-equal {
+  @media (min-width: $screen-sm-min) {
+    display: table;
+    table-layout: fixed;
+    width: calc(100% + 46px);
+    border-spacing: 23px 0;
+    margin-left: -23px;
+
+    > * {
+      display: table-cell;
+    }
+  }
+}

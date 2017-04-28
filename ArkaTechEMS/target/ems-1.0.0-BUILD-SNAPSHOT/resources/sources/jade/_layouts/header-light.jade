@@ -1,0 +1,21 @@
+extends  ../_skeleton
+
+block variables
+  - var navbarLayout = 0
+
+block title
+  title=layouts[0].title
+
+block page
+  // Page Header
+  include ../_header
+
+  // Page Content
+  main.page-content
+    +heading(layouts[0].title)
+    +breadcrumbs([[layouts[0].title]])
+    include ../_includes/_placeholder
+    include ../_includes/_brands-carousel
+
+  // Page Footer
+  include ../_footer

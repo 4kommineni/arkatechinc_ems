@@ -1,0 +1,79 @@
+extends  _skeleton
+
+block variables
+
+block title
+  title Grid System
+
+block page
+  // Page Header
+  include _header
+
+  // Page Content
+  main.page-content.page-type-1
+    +heading('Grid System')
+    +breadcrumbs([['Elements', '#'], ['Grid']])
+
+    // Grid system
+    section.section-top-60.section-bottom-75.section-sm-top-85
+      .shell.grid-system
+        .row
+          .col-xs-12
+            h3 1\1
+            p.
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium adipisci alias assumenda atque beatae corporis cumque deleniti deserunt doloribus eaque eos explicabo
+              id illo ipsa iure molestiae nesciunt nisi, officia optio praesentium quaerat quia quibusdam quidem quod repellat saepe sint sunt velit veniam veritatis vero voluptas voluptates voluptatibus! Architecto assumenda consectetur esse praesentium rerum! Accusantium amet, assumenda dolorum expedita ipsa iusto nihil porro recusandae saepe sapiente sed
+        .row.offset-top-50
+          .col-xs-6
+            h3 1\2
+            p.
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium adipisci alias assumenda atque beatae corporis cumque deleniti deserunt doloribus eaque eos explicabo id illo ipsa iure molestiae nesciunt nisi, officia optio praesentium quaerat quia quibusdam quidem quod repellat saepe sint sunt velit veniam veritatis vero
+          .col-xs-6
+            h3 1\2
+            p.
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium adipisci alias assumenda atque beatae corporis cumque deleniti deserunt doloribus eaque eos explicabo id illo ipsa iure molestiae nesciunt nisi, officia optio praesentium quaerat quia quibusdam quidem quod repellat saepe sint sunt velit veniam veritatis vero
+        .row.offset-top-50
+          .col-xs-4
+            h3 1\3
+            p.
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium adipisci alias assumenda atque beatae corporis cumque deleniti deserunt doloribus eaque eos explicabo id illo ipsa iure molestiae
+          .col-xs-4
+            h3 1\3
+            p.
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium adipisci alias assumenda atque beatae corporis cumque deleniti deserunt doloribus eaque eos explicabo id illo ipsa iure molestiae
+          .col-xs-4
+            h3 1\3
+            p.
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium adipisci alias assumenda atque beatae corporis cumque deleniti deserunt doloribus eaque eos explicabo id illo ipsa iure molestiae
+        .row.offset-top-50
+          .col-xs-3
+            h3 1\4
+            p.
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium adipisci alias assumenda atque beatae corporis cumque deleniti deserunt doloribus
+          .col-xs-3
+            h3 1\4
+            p.
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium adipisci alias assumenda atque beatae corporis cumque deleniti deserunt doloribus
+          .col-xs-3
+            h3 1\4
+            p.
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium adipisci alias assumenda atque beatae corporis cumque deleniti deserunt doloribus
+          .col-xs-3
+            h3 1\4
+            p.
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium adipisci alias assumenda atque beatae corporis cumque deleniti deserunt doloribus
+        .row.offset-top-50
+          .col-xs-8
+            h3 2\3
+            p.
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias aliquam architecto aut commodi consectetur corporis cum cumque dolorem doloremque dolores, eligendi enim ex exercitationem facere facilis in ipsa ipsam iste maxime molestiae nesciunt nihil nisi nulla pariatur placeat porro possimus quaerat quisquam reiciendis similique soluta.
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     Accusamus aliquid aut culpa delectus distinctio ea eveniet facilis illum impedit ipsum iste iusto libero maxime
+          .col-xs-4
+            h3 1\3
+            p.
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium adipisci alias assumenda atque beatae corporis cumque deleniti deserunt doloribus eaque eos explicabo id illo ipsa iure molestiae
+    ='\n'
+
+
+  // Page Footer
+  include _footer

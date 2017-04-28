@@ -1,0 +1,20 @@
+h3 Feedback Form
+// RD Mailform
+form.rd-mailform.rd-mailform-label-outside.text-left.offset-top-15(data-form-output="form-output-global", data-form-type='contact', method='post', action='bat/rd-mailform.php')
+  .range
+    .cell-xs-12.cell-md-4-9
+      .form-group
+        label.form-label-outside(for="contact-name") Your Name
+        input#contact-name.form-control(type="text" name="name" data-constraints="@Required")
+      .form-group
+        label.form-label-outside(for="contact-email") Your Email
+        input#contact-email.form-control(type="email" name="email" data-constraints="@Required @Email")
+      .form-group
+        label.form-label-outside(for="contact-phone") Phone
+        input#contact-phone.form-control(type="text" name="phone" data-constraints="@Required @Numeric")
+    .cell-xs-12.cell-md-5-9.offset-top-19.offset-md-top-0
+      .form-group
+        label.form-label-outside(for="contact-message") Your Message
+        textarea#contact-message.form-control(name="message" data-constraints="@Required")
+  .offset-top-34
+    button(type="submit").btn.btn-sm.btn-curious-blue Submit

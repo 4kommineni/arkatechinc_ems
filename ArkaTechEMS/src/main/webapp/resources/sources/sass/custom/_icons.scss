@@ -1,0 +1,305 @@
+//
+// Icons
+// --------------------------------------------------
+
+// Base styles
+// --------------------------------------------------
+
+.icon {
+  display: inline-block;
+  text-align: center;
+  &:before {
+    position: relative;
+    display: inline-block;
+    font-weight: 400;
+    font-style: normal;
+    speak: none;
+    text-transform: none;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+.icon-circle {
+  border-radius: 50%;
+}
+
+
+// Alternate icons
+// --------------------------------------------------
+.page {
+  // Color
+  .icon-default {
+    color: $text-color;
+  }
+
+  .icon-primary {
+    color: $brand-primary;
+  }
+
+  .icon-froly {
+    color: $froly;
+  }
+
+  .icon-dark {
+    color: $gray-dark;
+  }
+
+  .icon-darker {
+    color: $gray-darker;
+  }
+
+  .icon-picton-blue {
+    color: $picton-blue;
+  }
+
+  .icon-curious-blue {
+    color: $curious-blue;
+  }
+  
+  .icon-lynch {
+    color: $lynch;
+  }
+
+  .icon-mischka {
+    color: $mischka;
+  }
+
+  .icon-aqua-haze {
+    color: $aqua-haze;
+  }
+
+  // Fill
+  .icon-alto-filled {
+    background: $alto;
+  }
+
+  .icon-white-filled {
+    background: $white;
+  }
+
+  .icon-fiord-filled {
+    background: $fiord;
+  }
+
+  // Outline
+  .icon-lighter-outline {
+    border: 1px solid $gray-lighter;
+  }
+
+  a {
+    &.icon-default {
+      @include icon-link($text-color, $brand-primary);
+    }
+
+    &.icon-primary {
+      @include icon-link($brand-primary, $gray-darker);
+    }
+
+    &.icon-dark {
+      @include icon-link($gray-dark, $brand-primary);
+    }
+
+    &.icon-darker {
+      @include icon-link($gray-darker, $brand-primary);
+    }
+
+    &.icon-alto-filled {
+      &, &:active, &:focus {
+        background: $alto;
+      }
+
+      &:hover {
+        background: $white;
+      }
+    }
+
+    &.icon-white-filled {
+      &, &:active, &:focus {
+        background: $white;
+      }
+
+      &:hover {
+        color: $white;
+        background: $malibu;
+      }
+    }
+
+    &.icon-lighter-outline {
+      &, &:active, &:focus {
+        background: $white;
+      }
+
+      &:hover {
+        color: $white;
+        background: $curious-blue;
+        border-color: $curious-blue;
+      }
+    }
+
+    &.icon-fiord-filled {
+      &, &:active, &:focus {
+        background: $fiord;
+      }
+
+      &:hover {
+        color: $white;
+        background: $malibu;
+      }
+    }
+  }
+}
+
+
+
+// Icon Sizes
+// --------------------------------------------------
+
+.icon-xxs {
+  @include icon-sizing(14px);
+}
+
+.icon-xs {
+  @include icon-sizing(18px);
+
+  &-variant-1 {
+    @include icon-sizing(16px);
+  }
+}
+
+.icon-sm {
+  @include icon-sizing(22px);
+
+  &-variant-1 {
+    @include icon-sizing(20px);
+  }
+}
+
+.icon-md {
+  @include icon-sizing(42px);
+
+  &-variant-1 {
+    @include icon-sizing(36px);
+  }
+
+  &-variant-2 {
+    @include icon-sizing(44px);
+  }
+}
+
+.icon-lg {
+  @include icon-sizing(55px);
+}
+
+.icon-xxl {
+  @include icon-sizing(90px);
+
+  @media (min-width: $screen-sm-min) {
+    @include icon-sizing(172px);
+  }
+}
+
+.icon-xxs.icon-circle {
+  width: 27px;
+  height: 27px;
+  line-height: 27px;
+}
+
+.icon-decoration-border {
+  position: relative;
+  display: inline-block;
+  width: 80px;
+  height: 80px;
+  padding: 10px 10px;
+
+  .icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    @include transform(translate(-50%, -50%));
+  }
+
+  &:before,
+  &:after,
+  &-inner:before,
+  &-inner:after {
+    content: '';
+    position: absolute;
+    width: 17px;
+    height: 17px;
+    background-image: url('../images/decoration-border.png');
+    will-change: transform;
+    pointer-events: none;
+  }
+
+  &:before,
+  &:after {
+    left: 0;
+  }
+
+  &-inner:before,
+  &-inner:after {
+    right: 0;
+  }
+
+  &:before,
+  &-inner:before {
+    top: 0;
+  }
+
+  &:after,
+  &-inner:after {
+    bottom: 0;
+  }
+
+  &:after {
+    @include rotate(-90deg);
+  }
+
+  &-inner:before {
+    @include rotate(90deg);
+  }
+
+  &-inner:after {
+    @include rotate(180deg);
+  }
+
+  & + * {
+    margin-top: 19px;
+  }
+}
+
+.play-icon {
+  $ratio: .4;
+  $size: 80px;
+
+  display: inline-block;
+  width: $size;
+  height: $size;
+  text-align: center;
+  vertical-align: middle;
+  background: rgba($curious-blue, .66);
+  border-radius: 50%;
+  transition: .33s all ease;
+
+  &:hover {
+    background: $curious-blue;
+  }
+
+  &:before {
+    content: '';
+    position: relative;
+    right: -4px;
+    display: inline-block;
+    vertical-align: middle;
+    @include triangle(right, $size * $ratio  - 4px, $size * $ratio, $white);
+  }
+
+  &:after {
+    content: '';
+    display: inline-block;
+    width: 0;
+    height: 100%;
+    vertical-align: middle;
+  }
+}

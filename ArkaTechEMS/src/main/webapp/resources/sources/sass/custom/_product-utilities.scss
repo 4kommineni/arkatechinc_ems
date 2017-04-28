@@ -1,0 +1,23 @@
+//
+// Product utilities
+// --------------------------------------------------
+.product {
+  padding: 24px 37px;
+  text-align: center;
+  transition: .22s;
+  #{headings()} {
+    color: $gray-base;
+  }
+
+
+  &:hover {
+    @include box-shadow(0 0 5px 0 rgba(#010304, .13));
+  }
+}
+
+@media (min-width: $screen-sm-min) {
+  .product-inset-1 {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}

@@ -1,0 +1,275 @@
+case footerLayout
+  when 0
+    footer.page-foot(class=footerAdjustClass)
+      section.section-45.bg-river-bed
+        .shell.text-center.text-md-left
+          .range.range-xs-center.range-sm-middle
+            .cell-xs-12.cell-md-4
+              a.brand(href='index.html').offset-top-5
+                span.text-thin.text-primary [
+                .brand-name
+                  span.text-ubold Fin
+                  span.text-thin Expert
+                span.text-thin.text-primary ]
+            .cell-xs-12.cell-md-8.offset-top-38.offset-md-top-0
+              nav.footer-nav-wrap.text-center.text-md-right
+                ul.footer-nav-inline
+                  li(class={active: footerActiveIndex === 0})
+                    a(href='about.html')=footerMenu[0]
+                  li(class={active: footerActiveIndex === 1})
+                    a(href='blog.html')=footerMenu[1]
+                  li(class={active: footerActiveIndex === 2})
+                    a(href='contacts.html')=footerMenu[2]
+                  li(class={active: footerActiveIndex === 3})
+                    a(href='typography.html')=footerMenu[3]
+                  li(class={active: footerActiveIndex === 4})
+                    a(href='services.html')=footerMenu[4]
+                  li(class={active: footerActiveIndex === 5})
+                    a(href='careers.html')=footerMenu[5]
+                  li(class={active: footerActiveIndex === 6})
+                    a(href='team.html')=footerMenu[6]
+
+      section.section-35.section-sm-top-14.section-sm-bottom-14.bg-charade
+        .shell.text-center
+          .range.range-sm-middle
+            .cell-xs-12.cell-sm-6.text-sm-left
+              p.rights.text-regular
+                | &#169;&nbsp;
+                span(id='copyright-year')
+                | &nbsp;FinExpert.
+                a(href='privacy.html') Privacy policy
+                if activeIndex === 0
+                  // {%FOOTER_LINK}
+
+            .cell-xs-12.cell-sm-6.text-sm-right.offset-top-10.offset-sm-top-0
+              .elements-group-1
+                span.small.text-italic Follow Us:
+                ul.list-inline
+                  li: a(href='#').icon.icon-xxs.icon-circle.icon-lynch.icon-fiord-filled.fa-facebook
+                  li: a(href='#').icon.icon-xxs.icon-circle.icon-lynch.icon-fiord-filled.fa-twitter
+                  li: a(href='#').icon.icon-xxs.icon-circle.icon-lynch.icon-fiord-filled.fa-google-plus
+  when 1
+    footer.page-foot(class=footerAdjustClass)
+      section.section-45.section-sm-75.bg-river-bed
+        .shell.text-center.text-sm-left
+          .range.range-xs-center
+            .cell-xs-12.cell-sm-6.cell-lg-3
+              a.brand(href='index.html').offset-top-5
+                span.text-thin.text-primary [
+                .brand-name
+                  span.text-ubold Fin
+                  span.text-thin Expert
+                span.text-thin.text-primary ]
+              p.offset-sm-top-34.
+                Welcome to the leading company
+                delivering services that combine
+                quality, reliability and compliance!
+              .elements-group-1.offset-top-22
+                span.small.text-italic Follow Us:
+
+                ul.list-inline
+                  li: a(href='#').icon.icon-xxs.icon-circle.icon-dark.icon-white-filled.fa-facebook
+                  li: a(href='#').icon.icon-xxs.icon-circle.icon-dark.icon-white-filled.fa-twitter
+                  li: a(href='#').icon.icon-xxs.icon-circle.icon-dark.icon-white-filled.fa-google-plus
+            .cell-xs-12.cell-sm-6.cell-lg-3.offset-top-45.offset-sm-top-0
+              h4 Contact info
+              hr.hr-variant-1
+              address.contact-info.reveal-inline-block
+                ul.contact-info-list
+                  li.unit.unit-horizontal.unit-spacing-md
+                    .unit-left
+                      span.icon.icon-sm.icon-picton-blue.fa-phone
+                    .unit-body
+                      span.text-bold: a(href='callto:#') (123) 45678910
+                  li.unit.unit-horizontal.unit-spacing-md
+                    .unit-left
+                      span.icon.icon-sm.icon-picton-blue.fa-envelope-o
+                    .unit-body
+                      span: a(href='mailto:#') info@demolink.org
+                  li.unit.unit-horizontal.unit-spacing-md
+                    .unit-left
+                      span.icon.icon-sm.icon-picton-blue.fa-clock-o
+                    .unit-body
+                      span Mon - Sat: 9:00 - 18:00
+                  li.unit.unit-horizontal.unit-spacing-md
+                    .unit-left
+                      span.icon.icon-sm.icon-picton-blue.fa-map-marker
+                    .unit-body
+                      span
+                        a(href='#')
+                          span.text-bold 267 Park Avenue
+                          span New York, NY 90210
+            .cell-xs-12.cell-sm-6.cell-lg-3.offset-top-45.offset-lg-top-0
+              h4 Recent posts
+              hr.hr-variant-1
+              ul.list-post-preview
+                li
+                  article.post-preview
+                    .unit.unit-horizontal.unit-spacing-sm
+                      .unit-left
+                        .post-preview-image
+                          figure
+                            +jpg('blog-3-70x-70')
+                      .unit-body
+                        p.post-preview-heading
+                          a(href='blog-post.html').
+                            Ease Your Way In
+                            ToThe Global Stock...
+
+                        .post-preview-meta
+                          time(datetime='2016-02-04') Feb 4, 2016
+                          span 4 Comments
+                li
+                  article.post-preview
+                    .unit.unit-horizontal.unit-spacing-sm
+                      .unit-left
+                        .post-preview-image
+                          figure
+                            +jpg('blog-4-70x-70')
+                      .unit-body
+                        p.post-preview-heading
+                          a(href='blog-post.html').
+                            Making Cents Investments in Start-up...
+
+                        .post-preview-meta
+                          time(datetime='2016-02-04') Feb 4, 2016
+                          span 4 Comments
+
+            .cell-xs-12.cell-sm-6.cell-lg-3.offset-top-45.offset-lg-top-0
+              h4 Subscribe
+              hr.hr-variant-1
+              p.
+                Get latest updates and offers.
+              // RD Mailform
+              form.rd-mailform.rd-mailform-inline.max-width-300(data-form-output="form-output-global", data-form-type='subscribe', method='post', action='bat/rd-mailform.php')
+                .form-group
+                  label.form-label(for="footer-contact-email") E-Mail
+                  input#footer-contact-email.form-control(type="email" name="email" data-constraints="@Required @Email")
+                button(type="submit").btn.btn-xs.btn-picton-blue Send
+
+
+      section.section-35.section-md-top-14.section-md-bottom-14.bg-ebony-clay
+        .shell.text-center
+          .range.range-sm-middle
+            .cell-xs-12.cell-md-4.text-md-left
+              p.rights.text-regular
+                | &#169;&nbsp;
+                span(id='copyright-year')
+                | &nbsp;FinExpert.
+                a(href='privacy.html') Privacy policy
+                if activeIndex === 0
+                  // {%FOOTER_LINK}
+
+            .cell-xs-12.cell-md-8.text-sm-right.offset-top-10.offset-sm-top-0
+              .nav.footer-nav-wrap.text-center.text-md-right
+                ul.footer-nav-inline
+                  li(class={active: footerActiveIndex === 0})
+                    a(href='about.html')=footerMenu[0]
+                  li(class={active: footerActiveIndex === 1})
+                    a(href='blog.html')=footerMenu[1]
+                  li(class={active: footerActiveIndex === 2})
+                    a(href='contacts.html')=footerMenu[2]
+                  li(class={active: footerActiveIndex === 3})
+                    a(href='typography.html')=footerMenu[3]
+                  li(class={active: footerActiveIndex === 4})
+                    a(href='services.html')=footerMenu[4]
+                  li(class={active: footerActiveIndex === 5})
+                    a(href='careers.html')=footerMenu[5]
+                  li(class={active: footerActiveIndex === 6})
+                    a(href='team.html')=footerMenu[6]
+  default
+    footer.page-foot(class=footerAdjustClass)
+      section.section-45.section-sm-75.bg-river-bed
+        .shell.text-center.text-sm-left
+          .range.range-xs-center
+            .cell-xs-12.cell-sm-6.cell-lg-3
+              a.brand(href='index.html').offset-top-5
+                span.text-thin.text-primary [
+                .brand-name
+                  span.text-ubold Fin
+                  span.text-thin Expert
+                span.text-thin.text-primary ]
+              p.offset-sm-top-34.
+                Welcome to the leading company
+                delivering services that combine
+                quality, reliability and compliance!
+              .elements-group-1.offset-top-22
+                span.small.text-italic Follow Us:
+
+                ul.list-inline
+                  li: a(href='#').icon.icon-xxs.icon-circle.icon-dark.icon-white-filled.fa-facebook
+                  li: a(href='#').icon.icon-xxs.icon-circle.icon-dark.icon-white-filled.fa-twitter
+                  li: a(href='#').icon.icon-xxs.icon-circle.icon-dark.icon-white-filled.fa-google-plus
+            .cell-xs-12.cell-sm-6.cell-lg-3.offset-top-45.offset-sm-top-0
+              h4 Navigation
+              hr.hr-variant-1
+              nav.footer-nav-wrap.text-xs-left
+                .footer-nav-column
+                  ul.footer-nav
+                    li(class={active: footerActiveIndex === 0})
+                      a(href='about.html')=footerMenu[0]
+                    li(class={active: footerActiveIndex === 1})
+                      a(href='blog.html')=footerMenu[1]
+                    li(class={active: footerActiveIndex === 2})
+                      a(href='contacts.html')=footerMenu[2]
+                    li(class={active: footerActiveIndex === 3})
+                      a(href='typography.html')=footerMenu[3]
+                .footer-nav-column
+                  ul.footer-nav
+                    li(class={active: footerActiveIndex === 4})
+                      a(href='services.html')=footerMenu[4]
+                    li(class={active: footerActiveIndex === 5})
+                      a(href='careers.html')=footerMenu[5]
+                    li(class={active: footerActiveIndex === 6})
+                      a(href='team.html')=footerMenu[6]
+            .cell-xs-12.cell-sm-6.cell-lg-3.offset-top-45.offset-lg-top-0
+              h4 Contact info
+              hr.hr-variant-1
+              address.contact-info.reveal-inline-block
+                ul.contact-info-list
+                  li.unit.unit-horizontal.unit-spacing-md
+                    .unit-left
+                      span.icon.icon-sm.icon-picton-blue.fa-phone
+                    .unit-body
+                      span.text-bold: a(href='callto:#') (123) 45678910
+                  li.unit.unit-horizontal.unit-spacing-md
+                    .unit-left
+                      span.icon.icon-sm.icon-picton-blue.fa-envelope-o
+                    .unit-body
+                      span: a(href='mailto:#') info@demolink.org
+                  li.unit.unit-horizontal.unit-spacing-md
+                    .unit-left
+                      span.icon.icon-sm.icon-picton-blue.fa-clock-o
+                    .unit-body
+                      span Mon - Sat: 9:00 - 18:00
+                  li.unit.unit-horizontal.unit-spacing-md
+                    .unit-left
+                      span.icon.icon-sm.icon-picton-blue.fa-map-marker
+                    .unit-body
+                      span
+                        a(href='#')
+                          span.text-bold 267 Park Avenue
+                          span New York, NY 90210
+            .cell-xs-12.cell-sm-6.cell-lg-3.offset-top-45.offset-lg-top-0
+              h4 Subscribe
+              hr.hr-variant-1
+              p.
+                Get latest updates and offers.
+              // RD Mailform
+              form.rd-mailform.rd-mailform-inline.max-width-300(data-form-output="form-output-global", data-form-type='subscribe', method='post', action='bat/rd-mailform.php')
+                .form-group
+                  label.form-label(for="footer-contact-email") E-Mail
+                  input#footer-contact-email.form-control(type="email" name="email" data-constraints="@Required @Email")
+                button(type="submit").btn.btn-xs.btn-picton-blue Send
+
+
+      section.section-14.bg-ebony-clay
+        .shell.text-center
+          p.rights
+            | &#169;&nbsp;
+            span(id='copyright-year')
+            | &nbsp;FinExpert.
+            a(href='privacy.html') Privacy policy
+            if activeIndex === 0
+              // {%FOOTER_LINK}
+

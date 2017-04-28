@@ -1,0 +1,133 @@
+//
+// Post utilities
+// --------------------------------------------------
+
+// Post
+.post {
+  &-heading {
+    margin-top: 12px;
+    #{headings()} {
+      color: $gray-base;
+    }
+  }
+  &-meta {
+    margin-top: 12px;
+  }
+
+  &-body {
+    margin-top: 18px;
+    line-height: (26 / 15);
+  }
+}
+
+@media (min-width: $screen-sm-min) {
+  .post {
+    .post-heading {
+      margin-top: 22px;
+    }
+
+    .post-meta {
+      margin-top: 8px;
+    }
+  }
+}
+
+.post + .post {
+  margin-top: 58px;
+}
+
+// Post info
+.post-info {
+  &-body {
+    @extend .text-style-1;
+    color: $gray-base;
+  }
+}
+
+.post-info-footer {
+  margin-top: 18px;
+}
+
+@media (min-width: $screen-sm-min) {
+  .post-info-body {
+    padding-right: 70px;
+  }
+
+  .post-info-footer {
+    margin: 51px 40px 0 -10px;
+  }
+}
+
+@media (min-width: $screen-md-min) and (max-width: $screen-md-max) {
+  .post-info-footer {
+    margin: 51px 0 0 -20px;
+  }
+}
+
+@media (min-width: $screen-lg-min) {
+  .post-info-footer {
+    margin-right: 82px;
+  }
+}
+
+// Post single
+.post-single {
+  .post-body {
+    margin-top: 19px;
+  }
+}
+
+// Post preview
+.post-preview {
+  max-width: 270px;
+  text-align: left;
+  margin-left: auto;
+  margin-right: auto;
+  &-image {
+    &,
+    img {
+      border-radius: 17px;
+    }
+  }
+
+  &-heading {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: (21 / 14);
+    color: $gray-base;
+
+    a {
+      display: inline;
+      &, &:active, &:focus {
+        color: $gray-base;
+      }
+
+      &:hover {
+        color: $curious-blue;
+      }
+    }
+  }
+
+  &-meta {
+    margin-top: 7px;
+    font-size: 12px;
+    font-weight: 300;
+    white-space: nowrap;
+    color: $gray;
+
+    * + * {
+      &:before {
+        content: '/';
+        display: inline-block;
+        width: 8px;
+        text-align: center;
+      }
+    }
+  }
+
+  @media (min-width: $screen-sm-min) {
+    margin-left: 0;
+  }
+}
+
+

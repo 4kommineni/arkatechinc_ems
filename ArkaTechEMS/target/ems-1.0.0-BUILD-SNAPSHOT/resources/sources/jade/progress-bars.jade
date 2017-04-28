@@ -1,0 +1,82 @@
+extends  _skeleton
+
+block variables
+
+block title
+  title Progress bars
+
+block page
+  // Page Header
+  include _header
+
+  // Page Content
+  main.page-content
+    +heading('Progress Bars, Skills Bars, Counters')
+    +breadcrumbs([['Elements', '#'], ['Progress bars']])
+
+    // Emphasize with different Colors
+    section.section-50.section-sm-bottom-85
+      .shell
+        .range.range-xs-center.range-lg-left
+          .cell-sm-10.cell-md-6
+            .inset-sm-right-25.inset-md-right-50.inset-lg-right-70
+              h3 Emphasize with different Colors
+              p.offset-top-19.
+                Egestas, ante et vulputate volutpat, eros pede semper est, vitae luctus
+                metus libero eu augue. Morbi purus libero, faucibus adipiscing, commodo
+                quis, gravida id, est. Sed lectus.
+              p.offset-top-22.
+                Praesent elementum hendrerit tortor. Sed semper lorem at felis. Vestibulum volutpat, lacus a ultrices sagittis, mi neque euismod dui, eu pulvinar nunc sapien ornare nisl. Phasellus pede arcu, dapibus eu, fermentum et, dapibus sed, urna. Excepteur sint occaecat cupidatat.
+          .cell-sm-10.cell-md-6.cell-lg-5.offset-top-45.offset-md-top-10
+            ul.list-progress-bars
+              li
+                p Photoshop
+                .progress-bar.progress-bar-horizontal.progress-bar-sky-blue.no-body(data-value='83', data-stroke='30', data-easing='linear', data-counter='true' data-duration='1000')
+              li
+                p PHP
+                .progress-bar.progress-bar-horizontal.progress-bar-sky-blue.no-body(data-value='76', data-stroke='30', data-easing='linear', data-counter='true' data-duration='1000')
+              li
+                p Marketing
+                .progress-bar.progress-bar-horizontal.progress-bar-sky-blue.no-body(data-value='90', data-stroke='30', data-easing='linear', data-counter='true' data-duration='1000')
+              li
+                p HTML & CSS
+                .progress-bar.progress-bar-horizontal.progress-bar-sky-blue.no-body(data-value='78', data-stroke='30', data-easing='linear', data-counter='true' data-duration='1000')
+    ='\n'
+
+    // Round progress bars
+    section.section-top-68.section-bottom-85.bg-image.bg-fixed.bg-cover(style='background-image: url(images/bg-image-4.jpg);')
+      .shell.text-center
+        .range.range-sm-center
+          .cell-xs-12.cell-md-10.cell-lg-8
+            .countdown-wrap
+              // Countdown
+              .DateCountdown(data-type='until', data-date='2016-12-31 00:00:00', data-format='wdhms')
+
+    ='\n'
+
+    // Counters
+    section.section-50.section-sm-85
+      .shell.text-center
+        .range.range-xs-center
+          .cell-xs-12.cell-lg-10
+            ul.list-flex.list-flex-mod
+              li
+                p.count.counter(data-from='0' data-to='275') 275
+                p.text-gray-base Cases completed
+              li
+                p.count.counter(data-from='0' data-to='19') 19
+                p.text-gray-base Consultants
+              li
+                p.count.counter(data-from='0' data-to='130') 130
+                p.text-gray-base Awards winning
+              li
+                p.count.counter(data-from='0' data-to='723') 723
+                p.text-gray-base Happy clients
+              li
+                p.count.counter(data-from='0' data-to='123') 123
+                p.text-gray-base Cases completed
+    ='\n'
+
+
+  // Page Footer
+  include _footer

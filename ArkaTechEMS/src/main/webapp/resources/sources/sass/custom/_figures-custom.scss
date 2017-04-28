@@ -1,0 +1,22 @@
+//
+// Figure
+// --------------------------------------------------
+figure {
+  img {
+    width: 100%;
+    height: auto;
+    max-width: none;
+  }
+}
+
+.figure {
+
+}
+
+
+@media (min-width: $screen-md-min) {
+  .figure {
+    .caption {
+    }
+  }
+}

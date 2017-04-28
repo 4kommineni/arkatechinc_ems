@@ -1,0 +1,97 @@
+extends  _skeleton
+
+block variables
+  - var activeIndex = -1
+
+block title
+  title Dennis Roberts
+
+block page
+  // Page Header
+  include _header
+
+  // Page Content
+  main.page-content
+    +heading('Dennis Roberts')
+    +breadcrumbs([['About Us', 'about.html'], ['Team', 'team.html'], ['Dennis Roberts']])
+
+    // About us
+    section.section-top-55.section-bottom-85
+      .shell
+        .range
+          .cell-xs-12.cell-md-8.cell-lg-9
+            .range
+              .cell-xs-12
+                article.profile
+                  .profile-header
+                    .range
+                      .cell-xs-12.cell-sm-5.cell-lg-4
+                        figure.profile-image
+                          +jpg('team-member-profile-1-270x179')
+                      .cell-xs-12.cell-sm-7.cell-lg-8
+                        h3.offset-top-10 Dennis Roberts
+                        p Founder & CEO
+                        hr.hr-gray-lighter
+                        .range.offset-top-19.range-xs-middle.range-sm-top
+                          .cell-xs-6
+                            .unit.unit-horizontal.unit-spacing-sm
+                              .unit-left
+                                span.icon.icon-sm-variant-1.icon-mischka.fa-phone
+                              .unit-body
+                                a(href='callto:#') +1 628 123 4000
+
+                            .unit.unit-horizontal.unit-spacing-sm
+                              .unit-left
+                                span.icon.icon-sm-variant-1.icon-mischka.fa-envelope
+                              .unit-body
+                                a(href='mailto:#') denis@demolimk.org
+                          .cell-xs-6
+                            p.shift-up-sm-5 Social links
+                            ul.list-inline
+                              li: a(href='#').icon.icon-xxs.icon-circle.icon-dark.icon-lighter-outline.fa-linkedin
+                              li: a(href='#').icon.icon-xxs.icon-circle.icon-dark.icon-lighter-outline.fa-facebook
+                              li: a(href='#').icon.icon-xxs.icon-circle.icon-dark.icon-lighter-outline.fa-twitter
+                              li: a(href='#').icon.icon-xxs.icon-circle.icon-dark.icon-lighter-outline.fa-google-plus
+                  .range.offset-top-22
+                    .cell-xs-12
+                      p With over 20 years of experience in entrepreneurship, management, business planning, financial analysis, software engineering, operations, and decision analysis, Brandon has the breadth and depth of experience needed to quickly understand entrepreneurs' businesses and craft the most suitable solutions. Most recently as Vice President in Goldhill Group.
+                  .range
+                    .cell-xs-12.cell-sm-6.cell-lg-5-9
+                      h4 Areas of expertise
+                      ul.list-progress-bars
+                        li
+                          p Business transformation
+                          .progress-bar.progress-bar-horizontal.progress-bar-sky-blue.no-body(data-value='83', data-stroke='30', data-easing='linear', data-counter='true' data-duration='1000')
+                        li
+                          p Growth strategy
+                          .progress-bar.progress-bar-horizontal.progress-bar-sky-blue.no-body(data-value='76', data-stroke='30', data-easing='linear', data-counter='true' data-duration='1000')
+                        li
+                          p Restructuring and turnaround
+                          .progress-bar.progress-bar-horizontal.progress-bar-sky-blue.no-body(data-value='90', data-stroke='30', data-easing='linear', data-counter='true' data-duration='1000')
+                        li
+                          p M&A transaction support
+                          .progress-bar.progress-bar-horizontal.progress-bar-sky-blue.no-body(data-value='78', data-stroke='30', data-easing='linear', data-counter='true' data-duration='1000')
+                    .cell-xs-12.cell-sm-6.cell-lg-4-9.offset-top-41.offset-sm-top-0
+                      h4 Education
+                      ul.list-terms-list.bg-aqua-haze.border-radius-5
+                        li
+                          dl.list-terms-info
+                            dt MBA, Rotterdam School
+                            dd of Management, Erasmus University
+                        li
+                          dl.list-terms-info
+                            dt MBA, Rotterdam School
+                            dd of Management, Erasmus University
+                        li
+                          dl.list-terms-info
+                            dt MBA, Rotterdam School
+                            dd of Management, Erasmus University
+              .cell-xs-12.offset-top-50
+                include _includes/_feedback-form
+
+          include _includes/_aside-variant-1
+    ='\n'
+    include _includes/_brands-carousel
+
+  // Page Footer
+  include _footer

@@ -1,0 +1,14 @@
+//
+// Banner
+// --------------------------------------------------
+.banner {
+  padding: 39px 11px 40px 25px;
+  border-radius: 8px;
+  #{headings()} {
+    font-weight: 500;
+  }
+
+  .btn {
+    border-width: 1px;
+  }
+}

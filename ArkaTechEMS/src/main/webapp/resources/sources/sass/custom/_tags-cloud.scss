@@ -1,0 +1,23 @@
+//
+// Tags cloud
+// --------------------------------------------------
+.tags-cloud {
+  li {
+    font-size: 14px;
+    font-weight: 300;
+    a {
+      display: inline-block;
+      padding: 8px 11px;
+      border-radius: 5px;
+      &, &:active, &:focus {
+        color: $gray;
+        background: $athens-gray;
+      }
+
+      &:hover {
+        color: $gray-base;
+        background: $mercury;
+      }
+    }
+  }
+}

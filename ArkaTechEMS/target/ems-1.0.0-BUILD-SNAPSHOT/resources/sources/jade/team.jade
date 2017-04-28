@@ -1,0 +1,80 @@
+extends  _skeleton
+
+block variables
+  - var activeIndex = -1
+  - var footerActiveIndex = 6
+  - var pageActiveIndex = 2
+
+block title
+  title Our Team
+
+block page
+  // Page Header
+  include _header
+
+  // Page Content
+  main.page-content
+    +heading('Our Team')
+    +breadcrumbs([['About Us', 'about.html'], ['Team']])
+
+    // About us
+    section.section-top-55.section-bottom-85
+      .shell
+        .range
+          .cell-xs-12.cell-md-8.cell-lg-9
+            .range
+              .cell-xs-12.cell-sm-6.cell-lg-4
+                +profile-preview(
+                {
+                  image: 'team-1-270x179',
+                  name: 'Dennis Roberts',
+                  place: 'Founder & CEO',
+                  description: "As FinExpert's founder, Dennis solves issues concerning the company's development and its departments..."
+                })
+              .cell-xs-12.cell-sm-6.cell-lg-4.offset-top-60.offset-sm-top-0
+                +profile-preview(
+                {
+                  image: 'team-2-270x179',
+                  name: 'Clarke Grinn',
+                  place: 'Financial Advisor',
+                  description: "Clarke provides financial planning and wealth management services trying to minimize expenses and risks of our..."
+                })
+              .cell-xs-12.cell-sm-6.cell-lg-4.offset-top-60.offset-lg-top-0
+                +profile-preview(
+                {
+                  image: 'team-3-270x179',
+                  name: 'Ashley Jonas',
+                  place: 'Chief Finance Officer',
+                  description: "Ashley's main task is to manage the financial risks of FinExpert. She is also responsible for analyzing the data received from... "
+                })
+              .cell-xs-12.cell-sm-6.cell-lg-4.offset-top-60
+                +profile-preview(
+                {
+                  image: 'team-4-270x179',
+                  name: 'Johnny Bennett',
+                  place: 'Tax Consultant',
+                  description: "Mr. Benett is an important member of our team. His work consists in managing the taxes and solving various situations..."
+                })
+              .cell-xs-12.cell-sm-6.cell-lg-4.offset-top-60
+                +profile-preview(
+                {
+                  image: 'team-5-270x179',
+                  name: 'Joe Norris',
+                  place: 'Financial Advisor',
+                  description: "Ms. Norris deals with various financial concerns of small businesses and startups. He provides online consulting services..."
+                })
+              .cell-xs-12.cell-sm-6.cell-lg-4.offset-top-60
+                +profile-preview(
+                {
+                  image: 'team-6-270x179',
+                  name: 'Bernard Harris',
+                  place: 'Financial Advisor',
+                  description: "When it comes to reduction of financial risks of international companies and business corporations, Bernard is our leading consultant..."
+                })
+
+          include _includes/_aside-variant-1
+    ='\n'
+    include _includes/_brands-carousel
+
+  // Page Footer
+  include _footer

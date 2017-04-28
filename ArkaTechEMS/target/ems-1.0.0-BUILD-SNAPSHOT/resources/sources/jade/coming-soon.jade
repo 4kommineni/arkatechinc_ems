@@ -1,0 +1,38 @@
+extends  _skeleton.jade
+
+block variables
+
+block title
+  title Coming Soon
+
+block page
+  // Page Header
+  include _header
+
+  // Page Content
+  main.page-content.centered.bg-image(style='background-image: url(images/bg-image-4.jpg);')
+    // Coming soon
+    section.section-85
+      .shell.text-center
+        .range.range-xs-center
+          .cell-xs-12
+            h1 Coming Soon
+            p The site is undergoing some scheduled maintenance. Please come back later.
+          .cell-xs-12.cell-md-10.cell-lg-8.offset-top-10
+            .countdown-wrap
+              // Countdown
+              .DateCountdown.DateCountdown-1(data-type='until', data-date='2016-12-31 00:00:00', data-format='wdhms', data-bg='rgba(67,67,67,.39)')
+          .cell-xs-12.cell-sm-8.cell-lg-6.offset-top-45.offset-md-top-30
+            // RD Mailform
+            form.rd-mailform.rd-mailform-inline-variant-1.form-white(data-form-output="form-output-global", data-form-type='subscribe', method='post', action='bat/rd-mailform.php')
+              .form-group
+                label.form-label(for="subscribe-email") Your Email...
+                input#subscribe-email.form-control(type="email" name="email" data-constraints="@Required @Email")
+              button(type="submit").btn.btn-sm.btn-curious-blue Subscribe
+  ='\n'
+
+  // Page Footer
+  include _footer
+
+
+

@@ -1,0 +1,23 @@
+extends  _skeleton
+
+block variables
+  - var activeIndex = -1
+
+block title
+  title Search results
+
+block page
+  // Page Header
+  include _header
+
+  // Page Content
+  main.page-content
+    +heading('Search results')
+    +breadcrumbs([['Search results']])
+
+    section.section-55.section-sm-85
+      .shell
+        .rd-search-results
+
+  // Page Footer
+  include _footer

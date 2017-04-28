@@ -1,0 +1,68 @@
+extends  _skeleton
+
+block variables
+  - var activeIndex = 5
+  - var footerActiveIndex = 2
+
+block title
+  title=menu[activeIndex]
+
+block page
+  // Page Header
+  include _header
+
+  // Page Content
+  main.page-content
+    +heading(menu[activeIndex])
+    +breadcrumbs([[menu[activeIndex]]])
+
+    // Feedback-form
+    section.section-top-55.section-bottom-85
+      .shell
+        .range
+          .cell-xs-12.cell-sm-7.cell-md-8
+            include _includes/_feedback-form
+          .cell-xs-12.cell-sm-5.cell-md-4.offset-top-60.offset-sm-top-0
+            .inset-md-left-30.inset-md-right-30.inset-lg-left-70
+              h3 Contact Details
+              ul.list-terms-list-1
+                li
+                  dl.list-terms-info-1
+                    dt.h5 Address
+                    dd 267 Park Avenue New York, NY 90210
+                li
+                  dl.list-terms-info-1
+                    dt.h5 We Are Open
+                    dd Open hours: 8.00-18.00 Mon-Sat
+                li
+                  dl.list-terms-info-1
+                    dt.h5 Phone
+                    dd
+                      a(href='callto:#') (123) 45678910
+                      | ,&nbsp;
+                      a(href='callto:#') (123) 67886756
+                li
+                  dl.list-terms-info-1
+                    dt.h5 Email
+                    dd: a(href='mailto:#') info@demolink.org
+    ='\n'
+
+    // RD Google Map
+    section
+      .rd-google-map
+        #rd-google-map(class="rd-google-map__model", data-zoom='14', data-x='-73.9874068', data-y='40.643180', data-styles='[{"featureType":"administrative","elementType":"all","stylers":[{"visibility":"on"},{"lightness":33}]},{"featureType":"landscape","elementType":"all","stylers":[{"color":"#f2e5d4"}]},{"featureType":"poi.park","elementType":"geometry","stylers":[{"color":"#c5dac6"}]},{"featureType":"poi.park","elementType":"labels","stylers":[{"visibility":"on"},{"lightness":20}]},{"featureType":"road","elementType":"all","stylers":[{"lightness":20}]},{"featureType":"road.highway","elementType":"geometry","stylers":[{"color":"#c5c6c6"}]},{"featureType":"road.arterial","elementType":"geometry","stylers":[{"color":"#e4d7c6"}]},{"featureType":"road.local","elementType":"geometry","stylers":[{"color":"#fbfaf7"}]},{"featureType":"water","elementType":"all","stylers":[{"visibility":"on"},{"color":"#acbcc9"}]}]')
+          ul.map_locations
+            li(data-x='-73.9874068', data-y='40.643180')
+              p
+                | 9870 St Vincent Place, Glasgow, DC 45 Fr 45.
+                br
+                span 800 2345-6789
+    ='\n'
+
+
+
+  // Page Footer
+  include _footer
+
+
+

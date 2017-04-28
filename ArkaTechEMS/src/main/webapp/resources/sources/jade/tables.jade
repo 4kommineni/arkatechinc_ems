@@ -1,0 +1,38 @@
+extends  _skeleton
+
+block variables
+  - var activeIndex = -1
+  - var footerActiveIndex = -1
+
+block title
+  title Tables Style
+
+block page
+  // Page Header
+  include _header
+
+  // Page Content
+  main.page-content
+    +heading('Tables Style')
+    +breadcrumbs([['Elements', '#'], ['Tables Style']])
+
+    // Buttons Size
+    section.section-68
+      .shell
+        .range
+          .cell-xs-12
+            +table(['table-curious-blue'])
+
+          .cell-xs-12.offset-top-38
+            +table(['table-athens-gray', 'table-hover'])
+
+          .cell-xs-12.offset-top-38
+            +table(['table-curious-blue', 'table-striped'])
+
+          .cell-xs-12.offset-top-38
+            +table(['table-border-top'])
+    ='\n'
+
+
+  // Page Footer
+  include _footer

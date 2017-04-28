@@ -1,0 +1,156 @@
+extends  _skeleton
+
+block variables
+  - var activeIndex = -1
+  - var footerActiveIndex = -1
+
+block title
+  title Tabs
+
+block page
+  // Page Header
+  include _header
+
+  // Page Content
+  main.page-content
+    +heading('Tabs')
+    +breadcrumbs([['Elements', '#'], ['Tabs']])
+
+    // Horizontal Tabs
+    section.section-top-50
+      .shell
+        .range.range-sm-center
+          .cell-xs-12.cell-lg-10
+
+            h3.text-center Horizontal Tabs
+            .responsive-tabs.responsive-tabs-horizontal.responsive-tabs-default
+              ul.resp-tabs-list.inset-sm-right-25
+                li Tab 1
+                li Tab 2
+                li Tab 3
+                li Tab 4
+                li Tab 5
+              .resp-tabs-container
+                div.fadeIn.animated
+                  p.
+                    A website is a medium that connects a person with the world of digital data. With its help users can access information, make purchases,
+                    communicate with each other, and do loads of other things. A website has become an indispensable tool of a professional business presentation.
+                div.fadeIn.animated
+                  p.
+                    A website is a medium that connects a person with the world of digital data. With its help users can access information, make purchases,
+                    communicate with each other, and do loads of other things. A website has become an indispensable tool of a professional business presentation.
+                div.fadeIn.animated
+                  p.
+                    A website is a medium that connects a person with the world of digital data. With its help users can access information, make purchases,
+                    communicate with each other, and do loads of other things. A website has become an indispensable tool of a professional business presentation.
+                div.fadeIn.animated
+                  p.
+                    A website is a medium that connects a person with the world of digital data. With its help users can access information, make purchases,
+                    communicate with each other, and do loads of other things. A website has become an indispensable tool of a professional business presentation.
+                div.fadeIn.animated
+                  p.
+                    A website is a medium that connects a person with the world of digital data. With its help users can access information, make purchases,
+                    communicate with each other, and do loads of other things. A website has become an indispensable tool of a professional business presentation.
+    ='\n'
+
+    // Vertical Tabs
+    section.section-25.section-sm-14
+      .shell
+        .range.range-sm-center
+          .cell-xs-12.cell-lg-10
+
+            h3.text-center Vertical Tabs
+            .responsive-tabs.responsive-tabs-vertical.responsive-tabs-default
+              ul.resp-tabs-list
+                li Tab 1
+                li Tab 2
+                li Tab 3
+                li Tab 4
+                li Tab 5
+              .resp-tabs-container
+                div.fadeIn.animated
+                  p.
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda deleniti eaque eum exercitationem
+                    fugit in, ipsum, itaque minus molestias nam nobis officia quidem quisquam ratione recusandae reprehenderit veniam vero voluptates! A ad aspernatur autem corporis, culpa deleniti dignissimos id in iure, laudantium magnam maxime nostrum, praesentium quam soluta tempora voluptates? molestias nisi nostrum omnis
+                    perspiciatis quasi qui, quia quisquam, tenetur ullam unde velit veniam! Aliquam aliquid aut commodi cumque dolorem, ducimus enim eos harum id illum, ipsa iusto, laborum magnam maiores minima necessitatibus obcaecati optio provident qui quo repellat sequi sunt totam veritatis vitae.
+                  p.
+                    Dolores esse nam obcaecati praesentium quod? Accusamus ad aliquamasperiores beatae blanditiis
+                    consectetur consequuntur culpa doloremque ea exercitationem, facilis illum laborum magnam maiores
+                    necessitatibus nostrum
+                div.fadeIn.animated
+                  p.
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda deleniti eaque eum exercitationem
+                    fugit in, ipsum, itaque minus molestias nam nobis officia quidem quisquam ratione recusandae reprehenderit veniam vero voluptates! A ad aspernatur autem corporis, culpa deleniti dignissimos id in iure, laudantium magnam maxime nostrum, praesentium quam soluta tempora voluptates? molestias nisi nostrum omnis
+                    perspiciatis quasi qui, quia quisquam, tenetur ullam unde velit veniam! Aliquam aliquid aut commodi cumque dolorem, ducimus enim eos harum id illum, ipsa iusto, laborum magnam maiores minima necessitatibus obcaecati optio provident qui quo repellat sequi sunt totam veritatis vitae.
+                  p.
+                    Dolores esse nam obcaecati praesentium quod? Accusamus ad aliquamasperiores beatae blanditiis
+                    consectetur consequuntur culpa doloremque ea exercitationem, facilis illum laborum magnam maiores
+                    necessitatibus nostrum
+                div.fadeIn.animated
+                  p.
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda deleniti eaque eum exercitationem
+                    fugit in, ipsum, itaque minus molestias nam nobis officia quidem quisquam ratione recusandae reprehenderit veniam vero voluptates! A ad aspernatur autem corporis, culpa deleniti dignissimos id in iure, laudantium magnam maxime nostrum, praesentium quam soluta tempora voluptates? molestias nisi nostrum omnis
+                    perspiciatis quasi qui, quia quisquam, tenetur ullam unde velit veniam! Aliquam aliquid aut commodi cumque dolorem, ducimus enim eos harum id illum, ipsa iusto, laborum magnam maiores minima necessitatibus obcaecati optio provident qui quo repellat sequi sunt totam veritatis vitae.
+                  p.
+                    Dolores esse nam obcaecati praesentium quod? Accusamus ad aliquamasperiores beatae blanditiis
+                    consectetur consequuntur culpa doloremque ea exercitationem, facilis illum laborum magnam maiores
+                    necessitatibus nostrum
+                div.fadeIn.animated
+                  p.
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda deleniti eaque eum exercitationem
+                    fugit in, ipsum, itaque minus molestias nam nobis officia quidem quisquam ratione recusandae reprehenderit veniam vero voluptates! A ad aspernatur autem corporis, culpa deleniti dignissimos id in iure, laudantium magnam maxime nostrum, praesentium quam soluta tempora voluptates? molestias nisi nostrum omnis
+                    perspiciatis quasi qui, quia quisquam, tenetur ullam unde velit veniam! Aliquam aliquid aut commodi cumque dolorem, ducimus enim eos harum id illum, ipsa iusto, laborum magnam maiores minima necessitatibus obcaecati optio provident qui quo repellat sequi sunt totam veritatis vitae.
+                  p.
+                    Dolores esse nam obcaecati praesentium quod? Accusamus ad aliquamasperiores beatae blanditiis
+                    consectetur consequuntur culpa doloremque ea exercitationem, facilis illum laborum magnam maiores
+                    necessitatibus nostrum
+                div.fadeIn.animated
+                  p.
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda deleniti eaque eum exercitationem
+                    fugit in, ipsum, itaque minus molestias nam nobis officia quidem quisquam ratione recusandae reprehenderit veniam vero voluptates! A ad aspernatur autem corporis, culpa deleniti dignissimos id in iure, laudantium magnam maxime nostrum, praesentium quam soluta tempora voluptates? molestias nisi nostrum omnis
+                    perspiciatis quasi qui, quia quisquam, tenetur ullam unde velit veniam! Aliquam aliquid aut commodi cumque dolorem, ducimus enim eos harum id illum, ipsa iusto, laborum magnam maiores minima necessitatibus obcaecati optio provident qui quo repellat sequi sunt totam veritatis vitae.
+                  p.
+                    Dolores esse nam obcaecati praesentium quod? Accusamus ad aliquamasperiores beatae blanditiis
+                    consectetur consequuntur culpa doloremque ea exercitationem, facilis illum laborum magnam maiores
+                    necessitatibus nostrum
+    ='\n'
+
+    // Accordion
+    section.section-top-35.section-bottom-50.section-sm-bottom-125
+      .shell
+        .range.range-sm-center
+          .cell-xs-12.cell-lg-10
+
+            h3.text-center Accordion
+            .responsive-tabs.responsive-tabs-variant-2(data-type='accordion')
+              ul.resp-tabs-list
+                li
+                  | What parts should be replaced at what intervals?
+                li
+                  | Can I use trademarked names in my items?
+                li
+                  | Tips for Increasing Your Referral Income
+                li
+                  | How can I get support for an item which isn't working correctly?
+              .resp-tabs-container
+                div.fadeIn.animated.
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
+                  dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Ut enim ad minim veniam, quis nostrud
+                div.fadeIn.animated.
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
+                  dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Ut enim ad minim veniam, quis nostrud
+                div.fadeIn.animated.
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
+                  dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Ut enim ad minim veniam, quis nostrud
+                div.fadeIn.animated.
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
+                  dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Ut enim ad minim veniam, quis nostrud
+    ='\n'
+
+
+  // Page Footer
+  include _footer

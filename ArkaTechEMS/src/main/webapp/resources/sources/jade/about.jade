@@ -1,0 +1,77 @@
+extends  _skeleton
+
+block variables
+  - var activeIndex = 1
+  - var footerActiveIndex = 0
+  - var pageActiveIndex = 0
+
+block title
+  title=menu[activeIndex]
+
+block page
+  // Page Header
+  include _header
+
+  // Page Content
+  main.page-content
+    +heading(menu[activeIndex])
+    +breadcrumbs([[menu[activeIndex]]])
+
+    // About us
+    section.section-top-55.section-bottom-85
+      .shell
+        .range
+          .cell-xs-12.cell-md-8.cell-lg-9
+            .range
+              .cell-xs-12
+                article.post-info
+                  figure
+                    +jpg('about-1-870x400')
+                  .post-info-body.offset-top-30.offset-md-top-45
+                    h3 Doing the right thing, at the right time.
+                    p.
+                      Welcome to the leading company on the market! Our success is driven by the highest quality customer service. We can
+                      meet the requirements even of the whimsical clients; there are no complex tasks for us! Thanks for yourchoice! Our
+                      company can boast the reputation of the trusted partner known worldwide. We are proud of the uncompromising quality
+                    p.
+                      Thank you for visiting our site! You are at the right place! We are focused on providing integrated solutions and
+                      services to customers around the world. Putting our clients' interests first, we work hard to exceed your expectations.
+
+                  .post-info-footer
+                    ul.list-flex
+                      li
+                        p.count 275
+                        p.text-gray-base Cases completed
+                      li
+                        p.count 19
+                        p.text-gray-base Consultants
+                      li
+                        p.count 130
+                        p.text-gray-base Awards winning
+                      li
+                        p.count 723
+                        p.text-gray-base Happy clients
+            .range.range-condensed.offset-top-50.offset-sm-top-60.offset-lg-top-50
+              .cell-xs-12.cell-sm-6
+                h3 How We Work
+                .offset-top-25
+                  +thumbnail-video
+
+              .cell-xs-12.cell-sm-6.offset-top-38.offset-sm-top-0
+                .inset-sm-left-30
+                  h3 Our mission
+                  p.offset-top-15 Our renowned coaching programs will allow you to:
+                  ul.list-marked.list-marked-spacing-lg.offset-top-22
+                    li Relationships with clients, with employees
+                    li Integrity in all we do to achieve full potential
+                    li Cut expenses without sacrificing quality
+                    li Integrity in all we do to achieve full potential
+                    li Hone sharp leadership skills to manage your team
+                    li Manage your time so you'll get more done in less time
+
+          include _includes/_aside-variant-1
+    ='\n'
+    include _includes/_brands-carousel
+
+  // Page Footer
+  include _footer

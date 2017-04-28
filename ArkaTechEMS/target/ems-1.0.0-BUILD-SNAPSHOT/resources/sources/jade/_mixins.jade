@@ -1,0 +1,173 @@
+//-
+//- Common usage mixins
+//- --------------------------------------------------
+
+//- Jpg image
+mixin jpg(name)
+  - var size = name.split('-').pop().split('x');
+  img(src='images/' + name + '.jpg', alt='', width=size[0], height=size[1])
+
+//- Png image
+mixin png(name)
+  - var size = name.split('-').pop().split('x');
+  img(src='images/' + name + '.png', alt='', width=size[0], height=size[1])
+
+
+//-
+//- Specific usage mixins
+//- --------------------------------------------------
+
+//- Breadcrumbs
+mixin breadcrumbs(path)
+  section.border-bottom.border-bottom-gray-lighter
+    .shell
+      .range
+        .cell-xs-12
+          ul.breadcrumbs-custom
+            li: a(href='index.html')=menu[0]
+            - for (var i = 0; i < path.length - 1; i++)
+              li: a(href=path[i][1])=path[i][0]
+            li.active=path.pop()[0]
+
+//- Thumbnail
+mixin thumbnail(number, image, original, text)
+  - var originalSize = original.split('-').pop()
+  a.thumbnail(href='images/' + original + '.jpg', class='thumbnail-variant-' + number, data-photo-swipe-item='', data-size=originalSize)
+    figure
+      +jpg(image)
+    .caption!=text
+
+//- Heading
+mixin heading(text)
+  section.rd-parallax.bg-river-bed(data-on='false', data-lg-on='true')
+    .rd-parallax-layer(data-speed='0.65', data-type='media', data-url='images/bg-image-1.jpg')
+    .rd-parallax-layer(data-speed='0', data-type='html')
+      .shell.text-center
+        .range
+          .cell-xs-12
+            .section-45.section-sm-top-60.section-sm-bottom-68
+              h2=text
+              hr.hr-block.hr-white
+
+//- Post
+mixin post(image, header, text)
+  article.post
+    figure.post-image
+      +jpg(image)
+    .post-header
+      h6: a(href='single-post.html')=header
+    .post-meta
+      ul.list-meta
+        li
+          span.icon.icon-xxs.icon-primary.fa-clock-o
+          time(datetime='2016-10-03') 3 Oct 2015
+        li
+          span.icon.icon-xxs.icon-primary.fa-comment
+          span.comments-count 0
+          span Comments
+    .post-body
+      p=text
+      a.btn.btn-lg.btn-vivid-orange(href='single-post.html') Read more
+
+//- Pagination
+mixin pagination
+  ul.pagination-custom
+    li.disabled: a(href='#') Prev
+    li.active: a(href='#') 1
+    li: a(href='#') 2
+    li: a(href='#') 3
+    li: a(href='#') Next
+
+//- Social list
+mixin social-links
+  ul.list-inline
+    li: a.icon.icon-xs.icon-default.fa-facebook(href='#')
+    li: a.icon.icon-xs.icon-default.fa-twitter(href='#')
+    li: a.icon.icon-xs.icon-default.fa-pinterest(href='#')
+    li: a.icon.icon-xs.icon-default.fa-instagram(href='#')
+
+//- Table
+mixin table(classes)
+  .table-mobile
+    table.table(class=classes)
+      thead
+        tr
+          th Column 1
+          th Column 2
+          th Column 3
+          th Column 4
+      tbody
+        tr
+          td Item #1
+          td Description
+          td Subtotal
+          td $3.00
+        tr
+          td Item #2
+          td Description
+          td Discount
+          td $3.00
+        tr
+          td Item #3
+          td Description
+          td Shipping
+          td $3.00
+        tr
+          td Item #4
+          td Description
+          td Tax
+          td $4.00
+      tfoot
+        tr
+          td All Items
+          td Description
+          td Your Total
+          td $10.00
+
+//- Thumbnail video
+mixin thumbnail-video
+  .thumbnail.thumbnail-video
+    figure
+      +jpg('about-2-436x288')
+    a.play-icon(data-lightbox='iframe', href='https://www.youtube.com/watch?v=_j7-oZ2eQwI')
+
+//- Banner
+mixin banner
+  .banner.bg-curious-blue
+    h4 Do You Need Help?
+    p.
+      Contact us at the FinExpert
+      office nearest to you or submit
+      a business inquiry online.
+    a.btn.btn-sm.btn-white-outline(href='contacts.html') Contact Us
+
+//- Profile preview
+mixin profile-preview(obj)
+  .profile-preview
+    figure.profile-preview-image
+      +jpg(obj.image)
+    .profile-preview-header
+      h4.text-bold: a(href='team-member-profile.html')=obj.name
+      p.sub-heading=obj.place
+      hr.hr-gray-lighter
+    .profile-preview-body
+      p=obj.description
+    .profile-preview-footer
+      ul.list-inline
+        li: a(href='#').icon.icon-xxs.icon-circle.icon-dark.icon-lighter-outline.fa-facebook
+        li: a(href='#').icon.icon-xxs.icon-circle.icon-dark.icon-lighter-outline.fa-twitter
+        li: a(href='#').icon.icon-xxs.icon-circle.icon-dark.icon-lighter-outline.fa-google-plus
+      a.link.link-black.link-medium.link-icon.link-icon-right(href='team-member-profile.html')
+        span.icon.icon-xs.icon-curious-blue.fa-angle-right
+        | View profile
+
+//- Service
+mixin service(obj)
+  .service
+    .service-image
+      figure
+        +jpg(obj.image)
+    .service-body
+      h4.text-bold: a(href='#')=obj.title
+      hr.hr-block.hr-left.hr-curious-blue
+      p=obj.text

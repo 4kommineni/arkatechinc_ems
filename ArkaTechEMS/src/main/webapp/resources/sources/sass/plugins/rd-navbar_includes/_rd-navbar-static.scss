@@ -1,0 +1,241 @@
+/*
+* Static Layout
+*/
+
+.rd-navbar-static {
+  display: block;
+
+  .rd-navbar-nav-wrap {
+    @include display-flex;
+    @include align-items(center);
+    @extend .bg-wrap;
+    width: 100%;
+    height: auto;
+    min-height: 60px;
+    padding: 10px 0;
+    vertical-align: middle;
+
+    &, &:before {
+      background: $white;
+    }
+
+    &.rd-navbar-nav-dark {
+      &, &:before {
+        background: $rd-navbar-nav-background;
+      }
+    }
+
+    &-inner {
+      @include display-flex;
+      @include flex-direction(row-reverse);
+      @include flex-wrap(nowrap);
+      @include align-items(center);
+      @include justify-content(space-between);
+      width: 100%;
+      text-align: left;
+    }
+  }
+
+  .rd-navbar-aside-content {
+    @include display-flex;
+    @include flex-direction(column);
+
+    .block-wrap {
+      display: inline-block;
+      text-align: left;
+    }
+  }
+
+  .block-wrap-list {
+    @include order(2);
+    text-align: right;
+
+    > li + li {
+      margin-left: 68px;
+    }
+
+    li {
+      line-height: 1.2;
+    }
+  }
+
+  &.rd-navbar-default {
+    .rd-navbar-panel {
+      position: absolute;
+      top: 84px;
+    }
+  }
+
+  &.rd-navbar-light {
+    &.rd-navbar--is-stuck {
+      border-bottom: 1px solid $gray-lighter;
+      .rd-navbar-panel {
+        display: block;
+      }
+
+      .rd-navbar-inner-body {
+        padding-top: 5px;
+        padding-bottom: 5px;
+      }
+
+      .rd-navbar-nav-wrap {
+        .rd-navbar-nav > li > .rd-navbar-dropdown {
+          margin-top: 24px;
+        }
+      }
+    }
+    .rd-navbar-inner-body {
+      @include display-flex;
+      @include flex-direction(row);
+      @include flex-wrap(nowrap);
+      @include align-items(center);
+      @include justify-content(space-between);
+      padding: 22px 0;
+    }
+
+    .rd-navbar-search {
+      @include order(3);
+      @media (min-width: $screen-lg-min) {
+        width: 300px;
+      }
+    }
+
+    .rd-navbar-panel {
+      min-width: 100px;
+    }
+
+    .rd-navbar-aside {
+      width: 100%;
+    }
+
+    .rd-navbar-nav-wrap {
+      @include display-flex;
+      @include flex-grow(1);
+      width: auto;
+      text-align: center;
+
+      .rd-navbar-nav {
+        @include flex-grow(1);
+        padding-left: 20px;
+        padding-right: 62px;
+        > li + li {
+          margin-left: 32px;
+        }
+
+        @media (min-width: $screen-lg-min) {
+          padding-right: 20px;
+        }
+      }
+
+      .rd-navbar-nav > li > .rd-navbar-dropdown {
+        margin-top: 40px;
+        border-top-width: 0;
+      }
+    }
+
+    .block-wrap-list {
+      font-size: 0;
+      > li + li {
+        margin-left: 43px;
+      }
+
+      li {
+        font-size: 15px;
+        line-height: 1.2;
+      }
+    }
+  }
+
+  &.rd-navbar-contrast {
+    .rd-navbar-inner {
+      @include display-flex;
+      @include flex-direction(row);
+      @include flex-wrap(wrap);
+      @include align-items(center);
+      @include justify-content(space-between);
+    }
+
+    .rd-navbar-aside {
+      @include flex-grow(1);
+      padding: 33px 0 26px;
+    }
+
+    .rd-navbar-nav-wrap {
+      padding: 17px 0;
+    }
+
+    .rd-navbar-nav {
+      > li {
+        position: relative;
+
+        &:after {
+          content: '';
+          position: absolute;
+          top: 2px;
+          bottom: 2px;
+          right: -24px;
+          border-right: 1px solid $trout;
+        }
+
+        &:last-of-type {
+          &:after {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+
+  .block-container {
+    @include display-flex;
+    @include justify-content(space-between);
+    @include align-items(center);
+    padding: 13px 17px 13px 0;
+  }
+
+  .rd-navbar-nav-wrap {
+    width: 100%;
+
+    @media (max-width: $screen-lg-max) {
+      padding-left: 4px;
+      padding-right: 4px;
+    }
+  }
+
+  .rd-navbar-panel {
+    min-width: 270px;
+  }
+
+  // RD Navbar brand
+  .rd-navbar-brand{
+
+  }
+
+  .rd-navbar-search {
+    @media (min-width: $screen-lg-min) {
+      width: 330px;
+    }
+  }
+
+  &.rd-navbar-default {
+    .block-wrap-list {
+      padding: 27px 16px 22px 12px;
+    }
+  }
+
+  // RD Navbar nav wrap
+  .rd-navbar-nav-wrap {
+    text-align: left;
+  }
+
+  .rd-navbar-nav{
+    > li {
+      display: inline-block;
+
+      & + li{
+        margin-left: $navbar-static-nav-indent;
+      }
+    }
+  }
+}
+

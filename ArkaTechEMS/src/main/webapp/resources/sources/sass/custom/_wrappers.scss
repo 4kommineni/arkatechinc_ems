@@ -1,0 +1,26 @@
+//
+// Wrappers
+// --------------------------------------------------
+.image-wrap {
+  position: relative;
+  &-1 {
+    @media (min-width: $screen-md-min) {
+      img {
+        position: relative;
+        right: 51px;
+        bottom: 0;
+        width: 138%;
+        height: auto;
+      }
+    }
+    @media (min-width: $screen-lg-min) {
+      margin-top: -10px;
+      img {
+        right: 51px;
+        bottom: 0;
+        width: 111%;
+        height: auto;
+      }
+    }
+  }
+}

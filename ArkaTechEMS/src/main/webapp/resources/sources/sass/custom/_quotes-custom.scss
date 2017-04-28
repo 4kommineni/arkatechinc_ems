@@ -1,0 +1,118 @@
+//
+// Quotes custom
+// --------------------------------------------------
+.quote {
+  padding: 20px;
+  background: $athens-gray;
+  border-radius: 3px;
+  border-left: 3px solid $shakespeare;
+
+  q {
+    font-style: italic;
+  }
+
+  cite {
+    font-size: 16px;
+    font-weight: 500;
+    color: $gray-light;
+  }
+
+  .quote-meta {
+    margin-top: 9px;
+
+    span {
+      display: inline-block;
+      margin-left: 12px;
+    }
+  }
+
+}
+
+@media (min-width: $screen-sm-min) {
+  .quote {
+    padding: 27px 33px;
+    cite {
+      font-size: 18px;
+    }
+  }
+}
+
+.quote-variant-1 {
+  padding: 40px 5px 35px 5px;
+  text-align: center;
+  background: $white;
+  border-radius: 5px;
+  border: 1px solid $gray-lighter;
+  @include box-shadow(0 0 6px 3px rgba($silver-chalice, .05));
+
+  img {
+    border-radius: 50%;
+  }
+
+  q {
+    font-style: italic;
+  }
+
+  cite {
+    font-size: 16px;
+    font-weight: 700;
+    color: $gray-base;
+  }
+
+  small {
+    &:before {
+      display: none;
+    }
+  }
+
+  .quote-header {
+    white-space: nowrap;
+
+    img,
+    &:before,
+    &:after {
+      display: inline-block;
+      vertical-align: middle;
+    }
+
+    img {
+      margin: 0 20px;
+    }
+
+    &:before,
+    &:after {
+      content: '';
+      width: 30px;
+      margin-left: -.25em;
+      border-bottom: 1px solid $gray-lighter;
+    }
+  }
+
+  .quote-body {
+    padding: 6%;
+    margin-top: 22px;
+    line-height: (21 / 15);
+  }
+
+  .quote-meta {
+    margin-top: 22px;
+    * + p {
+      margin-top: 0;
+    }
+  }
+}
+
+@media (min-width: $screen-xs-min) {
+  .quote-variant-1 {
+    .quote-body {
+      padding: 0 10%;
+    }
+
+    .quote-header {
+      &:before,
+      &:after {
+        width: 66px;
+      }
+    }
+  }
+}

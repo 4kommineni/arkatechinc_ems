@@ -1,0 +1,60 @@
+//
+// Profile utilities
+// --------------------------------------------------
+.profile-preview {
+
+  &-image {
+    &,
+    img {
+      border-radius: 5px;
+    }
+  }
+
+  &-header {
+    margin-top: 15px;
+  }
+
+  &-body {
+    padding-right: 15px;
+    margin-top: 16px;
+    p {
+      line-height: (21 / 15);
+    }
+  }
+
+  &-footer {
+    margin-top: 20px;
+    @include display-flex;
+    @include flex-direction(row);
+    @include flex-wrap(nowrap);
+    @include justify-content(space-between);
+    @include align-items(center);
+
+    > * {
+      margin-top: 0;
+    }
+  }
+
+  * + .sub-heading {
+    margin-top: 2px;
+  }
+}
+
+@media (min-width: $screen-sm-min) {
+  .profile-preview-header {
+    margin-top: 21px;
+  }
+}
+
+.profile {
+  &-header {
+    h3 + p,
+    .h3 + p {
+      margin-top: 5px;
+    }
+
+    .list-inline {
+      margin-top: 0;
+    }
+  }
+}

@@ -1,0 +1,300 @@
+extends  _skeleton
+
+block variables
+  - var activeIndex = 0
+
+block title
+  title=menu[activeIndex]
+
+block page
+  // Page Header
+  include _header
+  block page-header-content
+    // Swiper
+    .swiper-container.swiper-slider(data-min-height='400px')
+      .swiper-wrapper
+        .swiper-slide.bg-gray-lighter
+          +jpg('home-slide-1')
+          .swiper-slide-caption
+            // Solutions that never miss the aim
+            section.section-68.section-sm-top-125.section-sm-bottom-152.section-lg-top-152.section-lg-bottom-235
+              .shell.text-center.text-sm-left
+                .range
+                  .cell-xs-12.cell-md-preffix-1.cell-xl-preffix-0
+                    h1
+                      | Solutions that
+                      br
+                      | never miss the aim
+                    .group-md.offset-top-25
+                      a.btn.btn-sm.btn-curious-blue-variant-1.min-width-160(href='#') Learn More
+                      a.btn.btn-sm.btn-gray-darker-outline.min-width-160(href='services.html') Our Services
+              ='\n'
+        .swiper-slide.bg-gray-darker
+          +jpg('home-slide-2')
+          .swiper-slide-caption
+            // Solutions that never miss the aim
+            section.section-68.section-sm-top-125.section-sm-bottom-152.section-lg-top-125.section-lg-bottom-235
+              .shell.text-center.text-sm-left
+                .range
+                  .cell-xs-12.cell-md-preffix-1.cell-xl-preffix-0
+                    h1 Expert Financial Advice
+                    p.big
+                      | With over 20 years of experience we'll ensure
+                      br.veil.reveal-sm-block
+                      | you always get the best guidance
+                    .group-md.offset-top-25
+                      a.btn.btn-sm.btn-curious-blue-variant-1.min-width-160(href='services.html') Our Services
+                      a.btn.btn-sm.btn-sm-mod.btn-white-outline.min-width-160(href='#') Purchase now
+            ='\n'
+      // Swiper Navigation
+      .swiper-nav
+        .swiper-button-prev
+        .swiper-button-next
+
+  // Page Content
+  main.page-content
+
+    // Main services
+    section.section-top-60.section-bottom-55
+      .shell
+        .range.range-sm-center
+          .cell-xs-12.cell-sm-5.cell-lg-3
+            .product
+              .icon-decoration-border
+                .icon-decoration-border-inner
+                  span.icon.icon-md-variant-2.icon-primary.fl-sympletts-coin18
+              h4: a(href='#') Financial Planning
+              p.
+                We'll help you make
+                sensible decisions about
+                 money that can help you
+                achieve your goals in life.
+
+          .cell-xs-12.cell-sm-5.cell-lg-3.offset-top-56.offset-sm-top-0
+            .product
+              .icon-decoration-border
+                .icon-decoration-border-inner
+                  span.icon.icon-md-variant-2.icon-primary.fl-sympletts-coffee2
+              h4: a(href='#') Retirement Planning
+              p.
+                Use our strategies and
+                retirement advice, including retirement  calculators
+                to help you retire faster.
+
+          .cell-xs-12.cell-sm-5.cell-lg-3.offset-top-56.offset-lg-top-0
+            .product.product-inset-1
+              .icon-decoration-border
+                .icon-decoration-border-inner
+                  .icon.icon-image
+                    +png('icon-chart-41x36')
+              h4: a(href='#') Risk Management
+              p.
+                Risk management is intended
+                 to manage financial and other
+                losses associated with risks
+                to your assets or business.
+
+          .cell-xs-12.cell-sm-5.cell-lg-3.offset-top-56.offset-lg-top-0
+            .product.product-inset-1
+              .icon-decoration-border
+                .icon-decoration-border-inner
+                  .icon.icon-image
+                    +png('icon-case-42x39')
+              h4: a(href='#') Taxation
+              p.
+                Tax planning considers the
+                tax implications of business
+                decisions, usually with the goal
+                of minimizing tax liability.
+    ='\n'
+
+    // What We Do
+    section.rd-parallax.bg-gray-darker(data-on='false', data-lg-on='true')
+      .rd-parallax-layer(data-speed='0.5', data-type='media', data-url='images/bg-image-2.jpg')
+      .rd-parallax-layer(data-speed='0', data-type='html')
+        .shell.text-center.text-md-left
+          .range
+            .cell-xs-12
+              .section-45.section-sm-top-85.section-sm-bottom-75
+                .elements-group
+                  .element-wrap
+                    h2.relative-shift-up-5.noshrink What We Do
+                    .hr-wrap.offset-top-10.offset-sm-top-15.offset-md-top-0
+                      hr.hr-md-vertical.hr-white
+                    p.big We provide expert financial advice for businesses and individuals
+                  .element-wrap
+                    a.btn.btn-sm.btn-curious-blue-variant-1.min-width-160(href='services.html') See All Services
+    ='\n'
+
+    // About Us
+    section.section-35.section-sm-68
+      .shell
+        .range.text-center
+          .cell-xs-12
+            h2 About Us
+            hr.hr-block.hr-curious-blue
+        .range.range-sm-center.range-md-reverse.offset-top-25.offset-sm-top-56
+          .cell-xs-12.cell-sm-9.cell-md-6
+            .inset-md-left-30.inset-md-right-30.inset-md-left-70.inset-md-right-70.offset-top-10
+              h4.text-bold: a(href='about.html') Doing the right thing, at the right time.
+              p.
+                Welcome to the leading company on the market! Our success
+                is driven by the highest quality customer service. We can meet the requirements even of the whimsical clients; there are no complex tasks for us! Thanks for your choice! Our company can boast the reputation of the trusted partner known worldwide. We are proud
+                of the uncompromising quality of services
+              a.btn.btn-sm.btn-curious-blue-outline.btn-outline-thin(href='about.html') Read More
+          .cell-xs-12.cell-sm-9.cell-md-6.offset-top-56.offset-md-top-0
+            .responsive-tabs.responsive-tabs-horizontal.responsive-tabs-default
+              ul.resp-tabs-list
+                li Facts
+                li Advantages
+                li Skills
+              .resp-tabs-container
+                div.fadeIn.animated
+                  p.
+                    Our company is your one stop solution for all needs. There is no doubt that we
+                    are the leaders and you don't have to worry about our image because it is perfect.
+                  ul.list-flex
+                    li
+                      p.count 275
+                      p.text-gray-base Cases completed
+                    li
+                      p.count 19
+                      p.text-gray-base Consultants
+                    li
+                      p.count 130
+                      p.text-gray-base Awards won
+
+                div.fadeIn.animated
+                  p.
+                    Our company is your one stop solution for all needs. There is no doubt that we
+                    are the leaders and you don't have to worry about our image because it is perfect.
+                  ul.list-flex
+                    li
+                      p.count 275
+                      p.text-gray-base Cases completed
+                    li
+                      p.count 19
+                      p.text-gray-base Consultants
+                    li
+                      p.count 130
+                      p.text-gray-base Awards won
+
+                div.fadeIn.animated
+                  p.
+                    Our company is your one stop solution for all needs. There is no doubt that we
+                    are the leaders and you don't have to worry about our image because it is perfect.
+                  ul.list-flex
+                    li
+                      p.count 275
+                      p.text-gray-base Cases completed
+                    li
+                      p.count 19
+                      p.text-gray-base Consultants
+                    li
+                      p.count 130
+                      p.text-gray-base Awards won
+    ='\n'
+
+    // Loan Calculator
+    section.section-45.section-sm-top-0.section-sm-bottom-0
+      .shell
+        .range.range-md-reverse
+          .cell-xs-12.cell-sm-7.cell-md-5
+            figure.image-wrap.image-wrap-1.bg-athens-gray-inner
+              +png('home-2-552x654')
+
+          .cell-xs-12.cell-md-7.shift-up-36.shift-up-sm-0
+            .calculator-wrap.block-top-level
+              h2 Loan Calculator
+              hr.hr-block.hr-left.hr-curious-blue
+              form.form-calculator
+                .group-equal
+                  .form-group
+                    label.form-label-outside(for="loan-amount") Loan Amount
+                    input#loan-amount.form-control(type="text")
+                  .form-group
+                    label.form-label-outside(for="residual-value") Residual Value
+                    input#residual-value.form-control(type="text" )
+                .group-equal
+                  .form-group
+                    label.form-label-outside(for="interest-rate") Interest Rate %
+                    input#interest-rate.form-control(type="text" value='7.5')
+                  .form-group
+                    label.form-label-outside(for="number-of-months") Number of Months
+                    input#number-of-months.form-control(type="text" value='7.5')
+              p.small.offset-top-30 Results based in the data entered above:
+              form.form-calculator.offset-top-30
+                .group-equal
+                  .form-group
+                    label.form-label-outside(for="monthly-payment") Monthly Payment
+                    input#monthly-payment.form-control(type="text" )
+                  .form-group
+                    label.form-label-outside(for="interest-amount") Interest Amount
+                    input#interest-amount.form-control(type="text" )
+                .group-equal
+                  .form-group.total
+                    label.form-label-outside(for="total-payment") Total Payment
+                    input#total-payment.form-control(type="text" )
+                  .placeholder &nbsp;
+    ='\n'
+
+    // Testimonials
+    section.section-50.section-sm-top-68
+      .shell
+        .range
+          .cell-xs-12.text-center
+            h2 Testimonials
+            hr.hr-block.hr-curious-blue
+
+          .cell-xs-12.offset-top-34.offset-sm-top-25
+            // Owl Carousel
+            .owl-carousel.owl-spacing-1(data-items='1', data-sm-items='2', data-md-items='3', data-stage-padding='30' data-margin='20', data-sm-stage-padding='1px', data-sm-margin='30', data-md-margin='15', data-lg-margin='66', data-nav='true')
+              .item.item-inset
+                blockquote.quote-variant-1
+                  .quote-header
+                    +jpg('home-4-72x72')
+                  .quote-body
+                    q.
+                      Hi, guys! You've solved my
+                      problem in no time! Your efficient
+                      services and customer care are second to none!
+
+                  .quote-meta
+                    cite Adam Watson
+                    p.text-gray-light (CEO & Founder)
+
+              .item.item-inset
+                blockquote.quote-variant-1
+                  .quote-header
+                    +jpg('home-5-72x72')
+                  .quote-body
+                    q.
+                      Wow, I'm so happy with
+                       your service. You managed
+                       to exceed my expectations!
+                      You guys are very efficient.
+
+                  .quote-meta
+                    cite Louise Smith
+                    p.text-gray-light (CEO & Founder)
+
+              .item.item-inset
+                blockquote.quote-variant-1
+                  .quote-header
+                    +jpg('home-6-72x72')
+                  .quote-body
+                    q.
+                      Great organization!! Your
+                      prompt answer became a pleasant
+                      surprise for me.You've rendered
+                      an invaluable service! Thank you!
+
+                  .quote-meta
+                    cite Jack Walsh
+                    p.text-gray-light (CEO & Founder)
+    ='\n'
+
+   include _includes/_brands-carousel
+
+  // Page Footer
+  include _footer

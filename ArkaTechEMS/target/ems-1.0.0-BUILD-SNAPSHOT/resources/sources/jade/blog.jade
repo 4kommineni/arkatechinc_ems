@@ -1,0 +1,169 @@
+extends  _skeleton
+
+block variables
+  - var activeIndex = 3
+  - var footerActiveIndex = 1
+
+block title
+  title=menu[activeIndex]
+
+block page
+  // Page Header
+  include _header
+
+  // Page Content
+  main.page-content
+    +heading(menu[activeIndex])
+    +breadcrumbs([[menu[activeIndex]]])
+
+    // About us
+    section.section-top-68.section-bottom-85
+      .shell
+        .range
+          .cell-xs-12.cell-md-8.cell-lg-9
+            article.post
+              .post-image
+                figure
+                  +jpg('blog-1-870x412')
+              .post-heading
+                h3: a(href='blog-post.html') Within the construction industry as their overdraft
+              .post-meta
+                ul.list-meta
+                  li
+                    dl.list-terms-inline
+                      dt Date
+                      dd: time(datetime='2016-01-22') January 22, 2016
+                  li
+                    dl.list-terms-inline
+                      dt Posted by
+                      dd admin
+                  li
+                    dl.list-terms-inline
+                      dt Comments
+                      dd 2
+                  li
+                    dl.list-terms-inline
+                      dt Category
+                      dd Funding trends
+                hr.hr-gray-lighter
+              .post-body
+                p.
+                  Financial services must tie these three factors together - customer experience, best practices and reliability/responsiveness
+                  - to have an effective web presence. They can't go hard into one particular area and ignore the others. They have to understand what's available versus their competitors, what consumers think of their sites versus competitors' and how their sites are...
+                a.btn.btn-sm.btn-curious-blue-outline(href='blog-post.html') Read More
+
+            article.post
+              .post-image
+                figure
+                  +jpg('blog-2-870x412')
+              .post-heading
+                h3: a(href='blog-post.html') What Makes A Financial Service's Website Successful?
+              .post-meta
+                ul.list-meta
+                  li
+                    dl.list-terms-inline
+                      dt Date
+                      dd: time(datetime='2016-01-22') January 22, 2016
+                  li
+                    dl.list-terms-inline
+                      dt Posted by
+                      dd admin
+                  li
+                    dl.list-terms-inline
+                      dt Comments
+                      dd 2
+                  li
+                    dl.list-terms-inline
+                      dt Category
+                      dd Funding trends
+                hr.hr-gray-lighter
+              .post-body
+                p.
+                  In your life, you may have many times facing financial issues. It's good if you know how to handle it by yourself and have enough time to take care of it. In other cases, it's time you get a financial consulting service. And the article below will show you those...
+                a.btn.btn-sm.btn-curious-blue-outline(href='blog-post.html') Read More
+
+          .cell-xs-12.cell-md-4.cell-lg-3.offset-top-60.offset-md-top-0
+            .inset-md-left-15.inset-md-right-10
+              .range
+                .cell-xs-12
+                  form.rd-search(action="search-results.html", method="GET", data-search-live="rd-search-results-live-1")
+                    .form-group
+                      label(for="rd-search-form-input-1" class="form-label") Search in blog...
+                      input(class="form-control" id="rd-search-form-input-1" type="text" name="s" autocomplete="off")
+                      #rd-search-results-live-1.rd-search-results-live
+                    button.rd-search-submit(type='submit')
+                .cell-xs-12.cell-sm-6.cell-md-12.offset-top-34
+                  h4.text-bold Categories
+                  ul.list-marked-bordered
+                    li: a(href='#') Finance
+                    li: a(href='#') Insurance
+                    li: a(href='#') Franchising
+                    li: a(href='#') Funding trends
+                    li: a(href='#') Finance & accounting
+                    li: a(href='#') Business plans
+                  .offset-top-38
+                    h4.text-bold Recent Posts
+                    ul.list-post-preview
+                      li
+                        article.post-preview
+                          .unit.unit-horizontal.unit-spacing-sm
+                            .unit-left
+                              .post-preview-image
+                                figure
+                                  +jpg('blog-3-70x-70')
+                            .unit-body
+                              p.post-preview-heading
+                                a(href='blog-post.html').
+                                  Ease Your Way In
+                                  ToThe Global Stock...
+
+                              .post-preview-meta
+                                time(datetime='2016-02-04') Feb 4, 2016
+                                span 4 Comments
+                      li
+                        article.post-preview
+                          .unit.unit-horizontal.unit-spacing-sm
+                            .unit-left
+                              .post-preview-image
+                                figure
+                                  +jpg('blog-4-70x-70')
+                            .unit-body
+                              p.post-preview-heading
+                                a(href='blog-post.html').
+                                  Making Cents Investments in Start-up...
+
+                              .post-preview-meta
+                                time(datetime='2016-02-04') Feb 4, 2016
+                                span 4 Comments
+                      li
+                        article.post-preview
+                          .unit.unit-horizontal.unit-spacing-sm
+                            .unit-left
+                              .post-preview-image
+                                figure
+                                  +jpg('blog-5-70x-70')
+                            .unit-body
+                              p.post-preview-heading
+                                a(href='#').
+                                  Why Do I Need To Use Financial Consulting..
+
+                              .post-preview-meta
+                                time(datetime='2016-02-04') Feb 4, 2016
+                                span 4 Comments
+
+                .cell-xs-12.cell-sm-6.cell-md-12.offset-top-50
+                  +banner
+                  h4.text-bold.offset-top-38 Tags
+                  ul.tags-cloud.group
+                    li: a(href='#') Advisors
+                    li: a(href='#') Benchmarks
+                    li: a(href='#') Millennials
+                    li: a(href='#') Online Services
+                    li: a(href='#') Personal Finance
+                    li: a(href='#') Inventors
+
+    ='\n'
+
+
+  // Page Footer
+  include _footer

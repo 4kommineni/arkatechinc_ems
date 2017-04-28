@@ -1,0 +1,76 @@
+extends  _skeleton
+
+block variables
+
+block title
+  title Forms
+
+block page
+  // Page Header
+  include _header
+
+  // Page Content
+  main.page-content
+    +heading('Forms')
+    +breadcrumbs([['Elements', '#'], ['Forms']])
+
+    // Login form
+    section.section-50.section-sm-bottom-85
+      .shell.text-center
+        .range.range-xs-center
+          .cell-xs-12
+            h3 Login form
+            .group-sm.offset-top-25
+              a.btn.btn-sm.btn-icon.btn-icon-left.btn-facebook(href='#')
+                span.icon.icon-sm-variant-1.fa-facebook
+                | Facebook
+              a.btn.btn-sm.btn-icon.btn-icon-left.btn-twitter(href='#')
+                span.icon.icon-sm-variant-1.fa-twitter
+                | Twitter
+              a.btn.btn-sm.btn-icon.btn-icon-left.btn-google(href='#')
+                span.icon.icon-sm-variant-1.fa-google-plus
+                | Google
+
+          .cell-xs-10.cell-sm-6.cell-lg-4.offset-top-25
+            p.large or
+            .inset-sm-left-15.inset-sm-right-25.offset-top-22
+              form.rd-mailform.rd-mailform-label-outside.text-left
+                .form-group
+                  label.form-label-outside(for="name-or-email") User Name or Email
+                  input#name-or-email.form-control(type="text" name="name-or-email")
+                .form-group
+                  label.form-label-outside(for="password") Password
+                  input#password.form-control(type="password" name="password")
+              .offset-top-34
+                button.btn.btn-sm.btn-curious-blue-variant-2.btn-block Sign In
+
+    ='\n'
+
+    // Subscribe
+    section.section-top-68.section-bottom-85.bg-image.bg-fixed.bg-cover(style='background-image: url(images/bg-image-4.jpg);')
+      .shell.text-center
+        .range.range-sm-center
+          .cell-xs-12.cell-sm-8.cell-lg-6
+            h2 Subscribe
+            p.offset-top-15.
+              The site is undergoing some scheduled maintenance. Please come back later.
+            // RD Mailform
+            form.rd-mailform.rd-mailform-inline-variant-1.form-white.offset-top-30(data-form-output="form-output-global", data-form-type='subscribe', method='post', action='bat/rd-mailform.php')
+              .form-group
+                label.form-label(for="subscribe-email") Your Email...
+                input#subscribe-email.form-control(type="email" name="subscribe-email" data-constraints="@Required @Email")
+              button(type="submit").btn.btn-sm.btn-curious-blue Subscribe
+
+    ='\n'
+
+    // Feedback Form
+    section.section-50.section-sm-top-75.section-sm-bottom-85
+      .shell
+        .range.range-xs-center
+          .cell-xs-12.cell-sm-11.cell-md-10.cell-lg-8
+            include _includes/_feedback-form
+    ='\n'
+
+
+  // Page Footer
+  include _footer

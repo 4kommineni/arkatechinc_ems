@@ -1,0 +1,110 @@
+extends  _skeleton
+
+block variables
+  - var activeIndex = -1
+  - var footerActiveIndex = 5
+  - var pageActiveIndex = 1
+
+block title
+  title Careers
+
+block page
+  // Page Header
+  include _header
+
+  // Page Content
+  main.page-content
+    +heading('Careers')
+    +breadcrumbs([['About Us', 'about.html'], ['Careers']])
+
+    // About us
+    section.section-top-55.section-bottom-60
+      .shell
+        .range
+          .cell-xs-12.cell-md-8.cell-lg-9
+            .range
+              .cell-xs-12
+                .inset-md-right-15.shift-up-sm-10
+                  h3 Job Requirement In Company
+                  p.text-style-1.offset-top-22.
+                    We focus on nurturing our team and providing our team an environment that is conductive to creative thought. We focus on
+                    eliminating stress and pressure so our team can think clearly and creatively.We specialize in hiring people who have the drive
+                    to succeed and the will to implement the discipline required to succeed.
+              .cell-xs-12.offset-top-41
+                h3 Application Process
+                ol.list-index.range.offset-top-25
+                  li.cell-xs-12.cell-sm-4
+                    .list-item-body
+                      .list-index-counter
+                      span.icon.icon-lg.icon-curious-blue.fl-sympletts-down-arrow19
+                      h5: a(href='#') Download Application
+                      p.
+                        More than 20 open positions
+                        in 4 directions financial
+                  li.cell-xs-12.cell-sm-4.offset-top-30.offset-sm-top-0
+                    .list-item-body
+                      .list-index-counter
+                      span.icon.icon-image
+                        +png('icon-pen-41x55')
+                      h5: a(href='#') Fill Informations
+                      p.
+                        Enter information
+                        about yourself
+                  li.cell-xs-12.cell-sm-4.offset-top-30.offset-sm-top-0
+                    .list-item-body
+                      .list-index-counter
+                      span.icon.icon-lg.icon-curious-blue.fl-sympletts-check-mark4
+                      h5: a(href='#') Send Back To Us
+                      p.
+                        Our manager will
+                        contact you soon
+
+            .range.range-condensed.offset-top-60
+              .cell-xs-12.cell-sm-6
+                +thumbnail-video
+
+              .cell-xs-12.cell-sm-6.offset-top-38.offset-sm-top-0
+                .inset-sm-left-30.shift-up-sm-10
+                  h3 Benefits and rewards
+                  p.offset-top-15.
+                    We care for our clients' business as our business. We think
+                    and act like business partners, not academic advisors. We share our clients' aspirations, work to understand their reality, and align our incentives with their objectives - so they
+                  ul.list-marked.list-marked-spacing-lg.offset-top-22
+                    li Relationships with clients, with employees
+                    li Integrity in all we do to achieve full potential
+                    li Cut expenses without sacrificing quality
+            .range
+              .cell-xs-12
+                h3 Opened Positions
+                .table-mobile.offset-top-22
+                  table.table.table-fixed.table-border-top
+                    thead
+                      tr
+                        th Job Posting Title
+                        th Location
+                        th Date
+                    tbody
+                      tr
+                        td: a(href='#') Leveraged Buyout Investor
+                        td Washington, D.C.
+                        td: time(datetime='2016-01-08') January 8, 2016
+                      tr
+                        td: a(href='#') Financial Analyst
+                        td New York, NY
+                        td: time(datetime='2016-01-03') January 3, 2016
+                      tr
+                        td: a(href='#') Investment Advisor
+                        td San Diego, CA
+                        td: time(datetime='2016-01-02') January 2, 2016
+                      tr
+                        td: a(href='#') Loss Control Specialist
+                        td Washington, D.C
+                        td: time(datetime='2016-01-02') January 2, 2016
+
+
+          include _includes/_aside-variant-1
+    ='\n'
+    include _includes/_brands-carousel
+
+  // Page Footer
+  include _footer

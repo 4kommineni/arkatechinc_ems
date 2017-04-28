@@ -1,0 +1,60 @@
+.cell-xs-12.cell-md-4.cell-lg-3.offset-top-60.offset-md-top-0
+  .inset-md-left-15.inset-md-right-15
+    .range
+      .cell-xs-12.cell-sm-6.cell-md-12.child-offset-41
+        if(pageActiveIndex != null)
+          nav.page-nav
+            ul.page-nav-list
+              li(class={active: pageActiveIndex == 0}): a(href=pageMenu[0].link)=pageMenu[0].title
+              li(class={active: pageActiveIndex == 1}): a(href=pageMenu[1].link)=pageMenu[1].title
+              li(class={active: pageActiveIndex == 2}): a(href=pageMenu[2].link)=pageMenu[2].title
+        +banner
+
+      .cell-xs-12.cell-sm-6.cell-md-12.offset-top-41.offset-sm-top-0.offset-md-top-41
+        // Owl Carousel
+        .owl-carousel(data-items='1', data-stage-padding='0' data-margin='20', data-sm-stage-padding='0', data-dots='true')
+          .item
+            blockquote.quote-variant-1
+              .quote-header
+                +jpg('home-4-72x72')
+              .quote-body
+                q.
+                  Wow, I'm so happy with
+                    your service. You managed
+                    to exceed my expectations!
+                  You guys are very efficient
+
+              .quote-meta
+                cite Adam Watson
+                p.text-gray-light (CEO & Founder)
+
+          .item
+            blockquote.quote-variant-1
+              .quote-header
+                +jpg('home-5-72x72')
+              .quote-body
+                q.
+                  Hi, guys! You've solved my
+                  problem in no time! Your services and customer care are great!
+
+              .quote-meta
+                cite Louise Smith
+                p.text-gray-light (CEO & Founder)
+
+          .item
+            blockquote.quote-variant-1
+              .quote-header
+                +jpg('home-6-72x72')
+              .quote-body
+                q.
+                  Great organization!! Your
+                  prompt answer became a pleasant
+                  surprise for me. Thank you!
+
+              .quote-meta
+                cite Jack Walsh
+                p.text-gray-light (CEO & Founder)
+        .offset-top-30
+          a.btn.btn-xxl.btn-outline-thin.btn-mercury-outline.btn-icon.btn-icon-left(href='#')
+            span.icon.icon-sm.icon-froly.fa-file-pdf-o
+            | Company presentation

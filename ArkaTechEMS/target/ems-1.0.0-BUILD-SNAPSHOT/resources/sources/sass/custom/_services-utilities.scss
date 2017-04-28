@@ -1,0 +1,29 @@
+//
+// Services utilities
+// --------------------------------------------------
+.service {
+  &-image {
+    &,
+    img {
+      border-radius: 5px;
+    }
+  }
+
+  &-header {
+    margin-top: 15px;
+  }
+
+  &-body {
+    padding-right: 9px;
+    margin-top: 25px;
+  }
+
+  hr {
+    width: 45px;
+    margin-top: 11px;
+  }
+
+  * + p {
+    margin-top: 21px;
+  }
+}

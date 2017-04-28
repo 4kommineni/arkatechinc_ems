@@ -1,0 +1,254 @@
+//
+// Custom Buttons Styles
+// --------------------------------------------------
+
+// Base styles
+// --------------------------------------------------
+
+.btn {
+  max-width: 100%;
+  font-size: $btn-font-size * 1px;
+  text-overflow: ellipsis;
+  border: 2px solid;
+  @include button-size($padding-base-vertical, $padding-base-horizontal, $btn-font-size*1px, $line-height-base, $btn-border-radius-small);
+  transition: .33s ease-out;
+
+  &:focus,
+  &:active,
+  &:active:focus {
+    outline: none;
+  }
+
+  &,
+  &:active,
+  &.active {
+    &:focus,
+    &.focus {
+
+    }
+  }
+
+  &:hover,
+  &:focus,
+  &.focus {
+
+  }
+
+  &:active,
+  &.active {
+    @include box-shadow(none);
+  }
+
+  &.disabled,
+  &[disabled],
+  fieldset[disabled] & {
+
+  }
+}
+
+// Alternate buttons
+// --------------------------------------------------
+.page {
+  .btn-default {
+    @include button-variant-custom($btn-default-color, $btn-default-bg, $btn-default-border, $white, $gray-darker, $gray-darker);
+  }
+
+  .btn-primary {
+    @include button-variant-custom($btn-primary-color, $btn-primary-bg, $btn-primary-border, $white, $malibu, $malibu);
+  }
+
+  .btn-primary-outline {
+    @include button-variant-custom($brand-primary, transparent, $brand-primary, $white, $brand-primary, $brand-primary);
+  }
+
+  // Success appears as green
+  .btn-success {
+  }
+
+  // Info appears as blue-green
+  .btn-info {
+  }
+
+  // Warning appears as orange
+  .btn-warning {
+  }
+
+  // Danger and error appear as red
+  .btn-danger {
+  }
+
+  .btn-picton-blue {
+    @include button-variant-custom($white, $picton-blue, $picton-blue, $white, $malibu, $malibu);
+  }
+
+  .btn-curious-blue {
+    @include button-variant-custom($white, $curious-blue, $curious-blue, $white, $malibu, $malibu);
+  }
+
+  .btn-curious-blue-variant-1 {
+    @include button-variant-custom($white, $curious-blue, $curious-blue, $curious-blue, $white, $white);
+  }
+
+  .btn-curious-blue-variant-2 {
+    @include button-variant-custom($white, $curious-blue, $curious-blue, $curious-blue, $white, $curious-blue);
+  }
+
+  .btn-curious-blue-outline {
+    @include button-variant-custom($curious-blue, transparent, $curious-blue, $white, $curious-blue, $curious-blue);
+    border-width: 1px;
+  }
+
+  .btn-gray-darker-outline {
+    @include button-variant-custom($gray-darker, transparent, $silver-chalice, $white, $curious-blue, $curious-blue);
+  }
+
+  .btn-mercury-outline {
+    @include button-variant-custom($curious-blue, transparent, $mercury, $white, $curious-blue, $curious-blue);
+  }
+
+  .btn-white {
+    @include button-variant-custom($curious-blue, $white, $white, $white, $curious-blue, $curious-blue);
+  }
+
+  .btn-white-outline {
+    @include button-variant-custom($white, transparent, $white, $curious-blue, $white, $white);
+  }
+
+  .btn-facebook {
+    @include button-variant-custom($white, #547abb, #547abb, #547abb, $white, #547abb);
+  }
+
+  .btn-twitter {
+    @include button-variant-custom($white, #14a5eb, #14a5eb, #14a5eb, $white, #14a5eb);
+  }
+
+  .btn-google {
+    @include button-variant-custom($white, #e75854, #e75854, #e75854, $white, #e75854);
+  }
+}
+
+// Button Sizes
+// --------------------------------------------------
+
+.btn-xs {
+  @include button-size($padding-xs-vertical, $padding-xs-horizontal, 17px, $line-height-small, $btn-border-radius-small);
+}
+
+.btn-sm {
+  @include button-size(10px, 30px, 17px, $line-height-small, $btn-border-radius-small);
+
+  &.btn-facebook,
+  &.btn-twitter {
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+
+  &-mod {
+    padding-left: 23px;
+    padding-right: 23px;
+  }
+}
+
+.btn-lg {
+  @include button-size(13px, 34px, 22px, $line-height-small, $btn-border-radius-small);
+}
+
+.btn-xl {
+  @include button-size(16px, 36px, 26px, $line-height-small, $btn-border-radius-small);
+}
+
+.btn-xxl {
+  @include button-size(18px, 27px, 17px, $line-height-small, $btn-border-radius-small);
+}
+
+// Button Shapes
+// --------------------------------------------------
+
+.btn-rect {
+  border-radius: 0;
+}
+
+.btn-round {
+  border-radius: 17px;
+}
+
+.btn-circle {
+  border-radius: 37px;
+}
+
+.btn-shadow {
+  @include box-shadow(0 3px 3px 0 rgba($gray-base, .14));
+}
+
+// Button Icon styles
+// --------------------------------------------------
+
+html .page {
+  .btn {
+    &.btn-icon {
+      display: inline-flex;
+      @include justify-content(center);
+      @include align-items(center);
+      vertical-align: middle;
+
+      .icon {
+        display: inline-block;
+        height: auto;
+        line-height: inherit;
+        vertical-align: baseline;
+        transition: 0s;
+      }
+
+      &:hover {
+        .icon {
+          color: inherit;
+        }
+      }
+
+      &-left {
+        .icon {
+          padding-right: 16px;
+        }
+      }
+
+      &-right {
+        .icon {
+          @include order(1);
+          padding-left: 10px;
+        }
+      }
+    }
+
+    &.btn-sm {
+      .icon {
+        position: relative;
+        top: 1px;
+        padding-right: 28px;
+      }
+
+      &.btn-google {
+        .icon {
+          padding-right: 36px;
+        }
+      }
+    }
+
+    &.btn-xxl {
+      .icon {
+        position: relative;
+        left: -10px;
+        padding-right: 25px;
+      }
+    }
+  }
+}
+
+// Button mod styles
+// --------------------------------------------------
+.min-width-160 {
+  min-width: 160px;
+}
+
+.btn-outline-thin {
+  border-width: 1px;
+}

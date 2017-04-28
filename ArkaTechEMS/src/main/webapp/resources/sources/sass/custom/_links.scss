@@ -1,0 +1,72 @@
+//
+// Links
+// --------------------------------------------------
+.link {
+  display: inline-block;
+}
+
+.link-inline {
+  font: inherit;
+  line-height: inherit;
+
+  &, &:focus {
+    color: $curious-blue;
+  }
+
+  &:hover,
+  &.hover {
+    color: $picton-blue;
+  }
+
+  &:active,
+  &.active {
+    color: $gray-light;
+  }
+}
+
+.link-black {
+  &, &:active, &:focus {
+    color: $gray-base;
+  }
+
+  &:hover {
+    &, * {
+      color: $curious-blue;
+    }
+  }
+}
+
+.link-medium {
+  font-weight: 500;
+}
+
+.link-icon {
+  vertical-align: middle;
+  .icon {
+    display: inline-block;
+    vertical-align: middle;
+    transition: 0s;
+  }
+
+  &-right {
+    .icon {
+      float: right;
+      padding-left: 10px;
+      line-height: 1.32;
+    }
+  }
+}
+
+.link-image {
+  width: 100%;
+  max-width: 173px;
+  margin-left: auto;
+  margin-right: auto;
+  > * {
+    width: 100%;
+  }
+  &:hover {
+    opacity: .6;
+  }
+}
+

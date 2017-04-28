@@ -1,0 +1,71 @@
+//
+// Comment utilities
+// --------------------------------------------------
+.comment {
+  padding: 40px 20px;
+
+  .unit-body {
+    > *:first-child {
+      margin-top: 6px;
+    }
+  }
+}
+
+.post-comment {
+  background: $gray-lighter;
+  border: 0;
+}
+
+.comment-group-reply {
+  padding-left: 6%;
+}
+
+// Elements
+.comment-body {
+  font-size: 16px;
+  line-height: 1.65;
+}
+
+.comment-footer {
+  @include display-flex;
+  @include flex-direction(row);
+  @include justify-content(space-between);
+  margin-top: 25px;
+}
+
+// Offsets
+.comment + * {
+  margin-top: 41px;
+}
+
+* + .post-comment {
+  margin-top: 60px;
+}
+
+// Adaptive
+@media (max-width: $screen-xs-max) {
+  .comment {
+    .list-meta {
+      margin-top: 6px;
+    }
+  }
+}
+
+@media (min-width: $screen-sm-min) {
+  .comment {
+    padding: 30px 67px 18px 50px;
+  }
+  .post-comment {
+    padding: 51px;
+  }
+
+  .comment-footer {
+    margin-top: 10px;
+  }
+}
+
+@media (min-width: $screen-md-min) {
+  * + .post-comment {
+    margin-top: 80px;
+  }
+}

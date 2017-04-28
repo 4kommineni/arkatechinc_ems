@@ -1,0 +1,368 @@
+// RD Navbar
+case (navbarLayout)
+  when 0
+    .rd-navbar-wrap
+      nav.rd-navbar.rd-navbar-light(data-layout='rd-navbar-fixed', data-sm-layout='rd-navbar-fixed', data-md-device-layout='rd-navbar-fixed', data-lg-layout='rd-navbar-static', data-lg-device-layout="rd-navbar-static", data-lg-stick-up-clone='true', data-md-stick-up-offset="80px", data-lg-stick-up-offset="80px")
+        .rd-navbar-inner
+          .rd-navbar-aside
+            .rd-navbar-aside-toggle(data-rd-navbar-toggle='.rd-navbar-aside')
+              span
+            .rd-navbar-aside-content
+              .bg-athens-gray.bg-wrap
+                .block-container
+                  .block-left
+                    ul.block-wrap-list
+                      li.block-wrap
+                        .unit.unit-xs-horizontal.unit-align-center.unit-middle.unit-spacing-xs
+                          .unit-left
+                            span.icon.icon-xs-variant-1.icon-default.fa-map-marker
+                          .unit-body
+                            address.contact-info
+                              a(href='#')
+                                span.small.text-regular 267 Park Avenue New York, NY 90210
+                      li.block-wrap
+                        .unit.unit-xs-horizontal.unit-align-center.unit-middle.unit-spacing-xs
+                          .unit-left
+                            span.icon.icon-xs.icon-default.fa-clock-o
+                          .unit-body
+                            address.contact-info
+                              span.small.text-regular Mon - Sat: 9:00am-18:00pm. Sunday CLOSED
+                      li.block-wrap
+                        .unit.unit-xs-horizontal.unit-align-center.unit-middle.unit-spacing-xs
+                          .unit-left
+                            span.icon.icon-xs.icon-default.fa-phone
+                          .unit-body
+                            address.contact-info
+                              span.small.text-regular: a(href='callto:#') (123)&nbsp;45678910
+                  .block-right
+                    ul.list-inline
+                      li: a(href='#').icon.icon-xxs.icon-circle.icon-dark.icon-alto-filled.fa-facebook
+                      li: a(href='#').icon.icon-xxs.icon-circle.icon-dark.icon-alto-filled.fa-twitter
+                      li: a(href='#').icon.icon-xxs.icon-circle.icon-dark.icon-alto-filled.fa-google-plus
+          .rd-navbar-inner-body
+            // RD Navbar Panel
+            .rd-navbar-panel
+              // RD Navbar Toggle
+              button.rd-navbar-toggle(data-rd-navbar-toggle='.rd-navbar-nav-wrap')
+                span
+              // RD Navbar Brand
+              a.rd-navbar-brand(href='index.html')
+                span.text-thin.text-primary [
+                .brand-name
+                  span.text-ubold.text-river-bed Fin
+                  span.text-thin Expert
+                span.text-thin.text-primary ]
+
+            .rd-navbar-nav-wrap
+              // RD Navbar Search
+              .rd-navbar-search.rd-navbar-search-opened
+                // RD Search
+                form.rd-search(action="search-results.html", method="GET", data-search-live="rd-search-results-live")
+                  .form-group
+                    label(class="form-label" for="rd-search-form-input") Search...
+                    input(class="form-control" id="rd-search-form-input" type="text" name="s" autocomplete="off")
+                    #rd-search-results-live.rd-search-results-live
+                  button.rd-search-submit(type='submit')
+                .rd-navbar-search-toggle(data-rd-navbar-toggle='.rd-navbar-search')
+
+              // RD Navbar Nav
+              ul.rd-navbar-nav
+                li(class={active: activeIndex === 0})
+                  a(href='index.html')=menu[0]
+                  // RD Navbar Dropdown
+                  ul.rd-navbar-dropdown
+                    each layout, index in layouts
+                      li
+                        a(href=layouts[index].link)=layouts[index].title
+                li(class={active: activeIndex === 1})
+                  a(href='about.html')=menu[1]
+                  // RD Navbar Dropdown
+                  ul.rd-navbar-dropdown
+                    li
+                      a(href='careers.html') Careers
+                    li
+                      a(href='team.html') Our team
+                    li
+                      a(href='team-member-profile.html') Team member profile
+                li(class={active: activeIndex === 2})
+                  a(href='services.html')=menu[2]
+                li(class={active: activeIndex === 3})
+                  a(href='blog.html')=menu[3]
+                  // RD Navbar Dropdown
+                  ul.rd-navbar-dropdown
+                    li
+                      a(href='blog-post.html') Blog post
+                li(class={active: activeIndex === 4})
+                  a(href='#')=menu[4]
+                  // RD Navbar Dropdown
+                  ul.rd-navbar-dropdown
+                    li
+                      a(href='#') Elements
+                      // RD Navbar Dropdown
+                      ul.rd-navbar-dropdown
+                        li
+                          a(href='buttons.html') Buttons
+                        li
+                          a(href='forms.html') Forms
+                        li
+                          a(href='grid-system.html') Grid system
+                        li
+                          a(href='icons.html') Icons FontAwesome
+                        li
+                          a(href='progress-bars.html') Progress Bars
+                        li
+                          a(href='tables.html') Tables Style
+                        li
+                          a(href='tabs.html') Tabs
+                        li
+                          a(href='typography.html') Typography
+                    li
+                      a(href='coming-soon.html') Coming soon
+                    li
+                      a(href='404.html') 404 Page
+                li(class={active: activeIndex === 5})
+                  a(href='contacts.html')=menu[5]
+  when 1
+    .rd-navbar-wrap
+      nav.rd-navbar.rd-navbar-contrast(data-layout='rd-navbar-fixed', data-sm-layout='rd-navbar-fixed', data-md-device-layout='rd-navbar-fixed', data-lg-layout='rd-navbar-static', data-lg-device-layout="rd-navbar-static", data-lg-stick-up-clone='true', data-md-stick-up-offset="114px", data-lg-stick-up-offset="114px")
+        .rd-navbar-inner
+          // RD Navbar Panel
+          .rd-navbar-panel
+            // RD Navbar Toggle
+            button.rd-navbar-toggle(data-rd-navbar-toggle='.rd-navbar-nav-wrap')
+              span
+            // RD Navbar Brand
+            a.rd-navbar-brand(href='index.html')
+              span.text-thin.text-primary [
+              .brand-name
+                span.text-ubold.text-river-bed Fin
+                span.text-thin Expert
+              span.text-thin.text-primary ]
+          .rd-navbar-aside
+            .rd-navbar-aside-toggle(data-rd-navbar-toggle='.rd-navbar-aside')
+              span
+            .rd-navbar-aside-content
+              ul.block-wrap-list
+                li.block-wrap
+                  .unit.unit-sm-horizontal.unit-align-center.unit-middle.unit-spacing-sm
+                    .unit-left
+                      figure
+                        +png('icon-clock-32x32')
+                    .unit-body
+                      address.contact-info
+                        span.text-bold.text-gray-base Mon - Sat: 9:00 - 18:00
+                        span Sunday CLOSED
+                li.block-wrap
+                  .unit.unit-sm-horizontal.unit-align-center.unit-middle.unit-spacing-sm
+                    .unit-left
+                      figure
+                        +png('icon-map-marker-25x33')
+                    .unit-body
+                      address.contact-info
+                        a(href='#')
+                          span.text-bold.text-gray-base 267 Park Avenue
+                          span New York, NY 90210
+                li.block-wrap
+                  .unit.unit-sm-horizontal.unit-align-center.unit-middle.unit-spacing-sm
+                    .unit-left
+                      figure
+                        +png('icon-phone-28x29')
+                    .unit-body
+                      address.contact-info
+                        span.text-bold.text-gray-base: a(href='callto:#') (123)&nbsp;45678910
+                        span: a(href='mailto:#') info@demolink.org
+          .rd-navbar-nav-wrap.rd-navbar-nav-dark
+            .rd-navbar-nav-wrap-inner
+              .elements-group-1
+                span.small.text-italic.text-white Follow Us:
+                ul.list-inline
+                  li: a(href='#').icon.icon-xxs.icon-circle.icon-lynch.icon-fiord-filled.fa-facebook
+                  li: a(href='#').icon.icon-xxs.icon-circle.icon-lynch.icon-fiord-filled.fa-twitter
+                  li: a(href='#').icon.icon-xxs.icon-circle.icon-lynch.icon-fiord-filled.fa-google-plus
+
+              // RD Navbar Nav
+              ul.rd-navbar-nav
+                li(class={active: activeIndex === 0})
+                  a(href='index.html')=menu[0]
+                  // RD Navbar Dropdown
+                  ul.rd-navbar-dropdown
+                    each layout, index in layouts
+                      li
+                        a(href=layouts[index].link)=layouts[index].title
+                li(class={active: activeIndex === 1})
+                  a(href='about.html')=menu[1]
+                  // RD Navbar Dropdown
+                  ul.rd-navbar-dropdown
+                    li
+                      a(href='careers.html') Careers
+                    li
+                      a(href='team.html') Our team
+                    li
+                      a(href='team-member-profile.html') Team member profile
+                li(class={active: activeIndex === 2})
+                  a(href='services.html')=menu[2]
+                li(class={active: activeIndex === 3})
+                  a(href='blog.html')=menu[3]
+                  // RD Navbar Dropdown
+                  ul.rd-navbar-dropdown
+                    li
+                      a(href='blog-post.html') Blog post
+                li(class={active: activeIndex === 4})
+                  a(href='#')=menu[4]
+                  // RD Navbar Dropdown
+                  ul.rd-navbar-dropdown
+                    li
+                      a(href='#') Elements
+                      // RD Navbar Dropdown
+                      ul.rd-navbar-dropdown
+                        li
+                          a(href='buttons.html') Buttons
+                        li
+                          a(href='forms.html') Forms
+                        li
+                          a(href='grid-system.html') Grid system
+                        li
+                          a(href='icons.html') Icons FontAwesome
+                        li
+                          a(href='progress-bars.html') Progress Bars
+                        li
+                          a(href='tables.html') Tables Style
+                        li
+                          a(href='tabs.html') Tabs
+                        li
+                          a(href='typography.html') Typography
+                    li
+                      a(href='coming-soon.html') Coming soon
+                    li
+                      a(href='404.html') 404 Page
+                li(class={active: activeIndex === 5})
+                  a(href='contacts.html')=menu[5]
+  default
+    .rd-navbar-wrap
+      nav.rd-navbar.rd-navbar-default(data-layout='rd-navbar-fixed', data-sm-layout='rd-navbar-fixed', data-md-device-layout='rd-navbar-fixed', data-lg-layout='rd-navbar-static', data-lg-device-layout="rd-navbar-static", data-lg-stick-up-clone='true', data-md-stick-up-offset="157px", data-lg-stick-up-offset="157px")
+        .rd-navbar-inner
+          // RD Navbar Panel
+          .rd-navbar-panel
+            // RD Navbar Toggle
+            button.rd-navbar-toggle(data-rd-navbar-toggle='.rd-navbar-nav-wrap')
+              span
+            // RD Navbar Brand
+            a.rd-navbar-brand(href='index.html')
+              span.text-thin.text-primary [
+              .brand-name
+                span.text-ubold.text-river-bed Fin
+                span.text-thin Expert
+              span.text-thin.text-primary ]
+          .rd-navbar-aside
+            .rd-navbar-aside-toggle(data-rd-navbar-toggle='.rd-navbar-aside')
+              span
+            .rd-navbar-aside-content
+              ul.block-wrap-list
+                li.block-wrap
+                  .unit.unit-sm-horizontal.unit-align-center.unit-middle.unit-spacing-sm
+                    .unit-left
+                      figure
+                        +png('icon-clock-32x32')
+                    .unit-body
+                      address.contact-info
+                        span.text-bold.text-gray-base Mon - Sat: 9:00 - 18:00
+                        span Sunday CLOSED
+                li.block-wrap
+                  .unit.unit-sm-horizontal.unit-align-center.unit-middle.unit-spacing-sm
+                    .unit-left
+                      figure
+                        +png('icon-map-marker-25x33')
+                    .unit-body
+                      address.contact-info
+                        a(href='#')
+                          span.text-bold.text-gray-base 267 Park Avenue
+                          span New York, NY 90210
+                li.block-wrap
+                  .unit.unit-sm-horizontal.unit-align-center.unit-middle.unit-spacing-sm
+                    .unit-left
+                      figure
+                        +png('icon-phone-28x29')
+                    .unit-body
+                      address.contact-info
+                        span.text-bold: a.text-gray-base(href='callto:#') (123)&nbsp;45678910
+                        span: a(href='mailto:#') info@demolink.org
+
+              .bg-athens-gray.bg-wrap
+                .block-container
+                  .block-left
+                    p.rd-navbar-fixed--hidden.small Welcome to FinExpert, your expert in managing your finances!
+                  .block-right
+                    ul.list-inline
+                      li: a(href='#').icon.icon-xxs.icon-circle.icon-dark.icon-alto-filled.fa-facebook
+                      li: a(href='#').icon.icon-xxs.icon-circle.icon-dark.icon-alto-filled.fa-twitter
+                      li: a(href='#').icon.icon-xxs.icon-circle.icon-dark.icon-alto-filled.fa-google-plus
+          .rd-navbar-nav-wrap.rd-navbar-nav-dark
+            .rd-navbar-nav-wrap-inner
+              // RD Navbar Search
+              .rd-navbar-search
+                // RD Search
+                form.rd-search(action="search-results.html", method="GET", data-search-live="rd-search-results-live")
+                  .form-group
+                    label(class="form-label" for="rd-search-form-input") Search...
+                    input#rd-search-form-input(class="form-control", type="text", name="s", autocomplete="off")
+                    #rd-search-results-live.rd-search-results-live
+                  button.rd-search-submit(type='submit')
+                .rd-navbar-search-toggle(data-rd-navbar-toggle='.rd-navbar-search')
+
+              // RD Navbar Nav
+              ul.rd-navbar-nav
+                li(class={active: activeIndex === 0})
+                  a(href='index.html')=menu[0]
+                  // RD Navbar Dropdown
+                  ul.rd-navbar-dropdown
+                    each layout, index in layouts
+                      li
+                        a(href=layouts[index].link)=layouts[index].title
+                li(class={active: activeIndex === 1})
+                  a(href='about.html')=menu[1]
+                  // RD Navbar Dropdown
+                  ul.rd-navbar-dropdown
+                    li
+                      a(href='careers.html') Careers
+                    li
+                      a(href='team.html') Our team
+                    li
+                      a(href='team-member-profile.html') Team member profile
+                li(class={active: activeIndex === 2})
+                  a(href='services.html')=menu[2]
+                li(class={active: activeIndex === 3})
+                  a(href='blog.html')=menu[3]
+                  // RD Navbar Dropdown
+                  ul.rd-navbar-dropdown
+                    li
+                      a(href='blog-post.html') Blog post
+                li(class={active: activeIndex === 4})
+                  a(href='#')=menu[4]
+                  // RD Navbar Dropdown
+                  ul.rd-navbar-dropdown
+                    li
+                      a(href='#') Elements
+                      // RD Navbar Dropdown
+                      ul.rd-navbar-dropdown
+                        li
+                          a(href='buttons.html') Buttons
+                        li
+                          a(href='forms.html') Forms
+                        li
+                          a(href='grid-system.html') Grid system
+                        li
+                          a(href='icons.html') Icons FontAwesome
+                        li
+                          a(href='progress-bars.html') Progress Bars
+                        li
+                          a(href='tables.html') Tables Style
+                        li
+                          a(href='tabs.html') Tabs
+                        li
+                          a(href='typography.html') Typography
+                    li
+                      a(href='coming-soon.html') Coming soon
+                    li
+                      a(href='404.html') 404 Page
+                li(class={active: activeIndex === 5})
+                  a(href='contacts.html')=menu[5]

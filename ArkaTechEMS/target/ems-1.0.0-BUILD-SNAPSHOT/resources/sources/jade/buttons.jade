@@ -1,0 +1,88 @@
+extends  _skeleton
+
+block variables
+  - var activeIndex = -1
+  - var footerActiveIndex = -1
+
+block title
+  title Buttons
+
+block page
+  // Page Header
+  include _header
+
+  // Page Content
+  main.page-content
+    +heading('Buttons')
+    +breadcrumbs([['Elements', '#'], ['Buttons']])
+
+    // Buttons Size
+    section.section-top-50.section-bottom-25
+      .shell
+        .range
+          .cell-xs-12
+            h3 Buttons Size
+            p 4 different sizes: super, large, default and small.
+          .cell-xs-12.offset-top-30
+            .group-xl
+              div.btn.btn-xl.btn-curious-blue Super Size
+              div.btn.btn-lg.btn-curious-blue Large Size
+              div.btn.btn-curious-blue Base Size
+              div.btn.btn-sm.btn-curious-blue Small Size
+    ='\n'
+
+    // Button Shapes
+    section.section-top-45.section-bottom-25
+      .shell
+        .range
+          .cell-xs-12
+            h3 Button Shapes
+            p 4 different shapes: default, round, square and circle.
+          .cell-xs-12.offset-top-30
+            .group-xl
+              div.btn.btn-curious-blue Default
+              div.btn.btn-round.btn-curious-blue Round
+              div.btn.btn-rect.btn-rect.btn-curious-blue Square
+              div.btn.btn-circle.btn-curious-blue Circle
+    ='\n'
+
+    // Buttons with Icons
+    section.section-top-45.section-bottom-25
+      .shell
+        .range
+          .cell-xs-12
+            h3 Buttons with Icons
+            p Buttons are fully integrated with 900+ icons.
+          .cell-xs-12.offset-top-30
+            .group-xl
+              div.btn.btn-curious-blue.btn-icon.btn-icon-right
+                span.icon.icon-sm.fa-angle-right
+                | Icon Right
+              div.btn.btn-curious-blue.btn-icon.btn-icon-left
+                span.icon.icon-sm.fa-angle-right
+                | Icon Left
+              div.btn.btn-curious-blue-outline.btn-icon.btn-icon-right
+                span.icon.icon-sm.fa-angle-right
+                | Icon Right
+              div.btn.btn-curious-blue-outline.btn-icon.btn-icon-left
+                span.icon.icon-sm.fa-angle-right
+                | Icon Left
+    ='\n'
+
+    // Button with Shadow
+    section.section-top-45.section-bottom-50.section-sm-bottom-85
+      .shell
+        .range
+          .cell-xs-12
+            h3 Button with Shadow
+            p Enhance your button with a shadow effect.
+          .cell-xs-12.offset-top-30
+            .group-xl
+              div.btn.btn-curious-blue.btn-shadow Shadow
+              div.btn.btn-curious-blue-outline.btn-shadow Shadow
+    ='\n'
+
+
+
+  // Page Footer
+  include _footer

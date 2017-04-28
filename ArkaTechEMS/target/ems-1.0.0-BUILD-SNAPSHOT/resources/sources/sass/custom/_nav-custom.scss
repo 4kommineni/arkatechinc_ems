@@ -1,0 +1,122 @@
+//
+// Nav
+// --------------------------------------------------
+// Footer nav
+.footer-nav-wrap {
+  @include clearfix;
+  white-space: nowrap;
+}
+
+.footer-nav-column {
+  display: inline-block;
+  padding-right: 6px;
+  float: left;
+  white-space: normal;
+
+  &:first-child {
+    width: 56%;
+  }
+
+  &:last-child {
+    width: 44%;
+  }
+}
+
+.footer-nav {
+  display: inline-block;
+  text-align: left;
+  a {
+    &, &:active, &:focus {
+      color: $oslo-gray;
+    }
+  }
+
+  li.active a,
+  a:hover {
+    color: $malibu;
+  }
+
+  li.active {
+    pointer-events: none;
+  }
+
+  li + li {
+    margin-top: 6px;
+  }
+}
+
+.footer-nav-inline {
+  position: relative;
+  margin-left: -36px;
+  margin-bottom: 12px;
+  white-space: normal;
+
+  li {
+    display: inline-block;
+    a {
+      &, &:active, &:focus {
+        color: $oslo-gray;
+      }
+
+      &:hover {
+        color: $shakespeare;
+      }
+    }
+  }
+
+  li {
+    margin-top: 12px;
+    margin-left: 36px;
+  }
+}
+
+// Page nav
+.page-nav {
+  li {
+    padding: 12px 6px 13px;
+    border-bottom: 1px solid $mercury;
+  }
+
+  a {
+    font-weight: 500;
+    &, &:active, &:focus {
+      color: $nobel;
+    }
+  }
+
+  li.active a,
+  a:hover {
+    color: $curious-blue;
+  }
+
+  li.active {
+    pointer-events: none;
+  }
+}
+
+@media (min-width: $screen-xs-min) {
+  .footer-nav-wrap {
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .footer-nav-column {
+    text-align: center;
+  }
+}
+
+@media (min-width: $screen-sm-min) {
+  .footer-nav {
+    li + li {
+      margin-top: 12px;
+    }
+    &-wrap {
+      width: 100%;
+    }
+  }
+
+  .footer-nav-column {
+    text-align: left;
+  }
+}

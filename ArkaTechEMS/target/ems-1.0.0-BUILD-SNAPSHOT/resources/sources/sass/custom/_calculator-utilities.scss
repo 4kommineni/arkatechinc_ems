@@ -1,0 +1,17 @@
+//
+// Calculator utilities
+// --------------------------------------------------
+.calculator-wrap {
+  padding: 35px 20px;
+  background: $white;
+  @include box-shadow(0 0 9px 7px rgba($silver-chalice, .2));
+
+  @media (min-width: $screen-sm-min) {
+    padding: 66px 54px 73px;
+  }
+
+  @media (min-width: $screen-lg-min) {
+    margin-right: 6px;
+
+  }
+}

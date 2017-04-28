@@ -1,0 +1,78 @@
+extends  _skeleton
+
+block variables
+  - var activeIndex = 2
+  - var footerActiveIndex = 4
+
+block title
+  title Our Services
+
+block page
+  // Page Header
+  include _header
+
+  // Page Content
+  main.page-content
+    +heading('Our Services')
+    +breadcrumbs([['Our Services']])
+
+    // About us
+    section.section-top-55.section-bottom-85
+      .shell
+        .range
+          .cell-xs-12.cell-md-8.cell-lg-9
+            .range
+              .cell-xs-12.cell-sm-6.cell-lg-4
+                +service(
+                {
+                  image: 'service-1-270x180',
+                  title: 'Financial Planning',
+                  text: "Though it is a continuous and complex process, financial planning helps an individual to make sensible decisions about money goals in his/her life."
+                })
+
+              .cell-xs-12.cell-sm-6.cell-lg-4.offset-top-56.offset-sm-top-0
+                +service(
+                {
+                  image: 'service-2-270x180',
+                  title: 'Investment advising',
+                  text: "Our investment advisors review clients' goals, investment experience and risk tolerance, and determine a financial investment plan best suited for each client."
+                })
+
+              .cell-xs-12.cell-sm-6.cell-lg-4.offset-top-56.offset-lg-top-0
+                +service(
+                {
+                  image: 'service-3-270x180',
+                  title: 'Taxation',
+                  text: "Arranging your affairs to avoid or postpone taxation is a true art, and effective tax planning can be the first step to your financial success and potential savings."
+                })
+
+              .cell-xs-12.cell-sm-6.cell-lg-4.offset-top-56
+                +service(
+                {
+                  image: 'service-4-270x180',
+                  title: 'Retirement planning',
+                  text: "Planning your retirement can be problematic in case you don't have necessary knowledge about managing your funds or building a ground for your retirement."
+                })
+
+              .cell-xs-12.cell-sm-6.cell-lg-4.offset-top-56
+                +service(
+                {
+                  image: 'service-5-270x180',
+                  title: 'Business planning',
+                  text: "Managing finances of a company, no matter how big or small, often seems a challenging task but our experts can help you improve your company's financial state."
+                })
+
+              .cell-xs-12.cell-sm-6.cell-lg-4.offset-top-56
+                +service(
+                {
+                  image: 'service-6-270x180',
+                  title: 'Risk Management',
+                  text: "This sphere of financial advisory includes identification, assessment, and prioritization of possible risks for your business with following preventative measures."
+                })
+
+          include _includes/_aside-variant-1
+    ='\n'
+    include _includes/_brands-carousel
+
+  // Page Footer
+  include _footer
